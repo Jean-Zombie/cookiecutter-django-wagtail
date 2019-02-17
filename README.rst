@@ -36,7 +36,7 @@ production-ready Django projects quickly.
 Features
 ---------
 
-* For Django 2.0
+* For Django 2.0 *and* Wagtail CMS
 * Works with Python 3.6
 * Renders Django projects with 100% starting test coverage
 * Twitter Bootstrap_ v4.1.1 (`maintained Foundation fork`_ also available)
@@ -137,8 +137,8 @@ First, get Cookiecutter. Trust me, it's awesome::
 
 Now run it against this repo::
 
-    $ cookiecutter https://github.com/pydanny/cookiecutter-django
-
+    $ cookiecutter https://github.com/Jean-Zombie/cookiecutter-django-wagtail/
+    
 You'll be prompted for some values. Provide them, then a Django project will be created for you.
 
 **Warning**: After this point, change 'Daniel Greenfeld', 'pydanny', etc to your own information.
