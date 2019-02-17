@@ -78,8 +78,27 @@ LOCAL_APPS = [
     '{{ cookiecutter.project_slug }}.users.apps.UsersAppConfig',
     # Your stuff: custom apps go here
 ]
+
+# wagtail apps
+WAGTAIL = [
+'wagtail.contrib.forms',
+'wagtail.contrib.redirects',
+'wagtail.embeds',
+'wagtail.sites',
+'wagtail.users',
+'wagtail.snippets',
+'wagtail.documents',
+'wagtail.images',
+'wagtail.search',
+'wagtail.admin',
+'wagtail.core',
+
+'modelcluster',
+'taggit',
+]
+
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS + WAGTAIL
 
 # MIGRATIONS
 # ------------------------------------------------------------------------------
@@ -140,6 +159,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'wagtail.core.middleware.SiteMiddleware',
+    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
 # STATIC
@@ -284,4 +306,4 @@ STATICFILES_FINDERS += ['compressor.finders.CompressorFinder']
 
 {%- endif %}
 # Your stuff...
-# ------------------------------------------------------------------------------
+WAGTAIL_SITE_NAME = '{{cookiecutter.project_slug}}'
