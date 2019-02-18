@@ -96,10 +96,9 @@ Constraints
 Usage
 ------
 
-Let's pretend you want to create a Django project called "redditclone". Rather than using ``startproject``
-and then editing the results to include your name, email, and various configuration issues that always get forgotten until the worst possible moment, get cookiecutter_ to do all the work.
+Instead of using ``startproject``you will use Cookiecutter to set up your project. Cookiecutter will prompt you for some  technical and administrative question like your name, email, and various configuration issues.
 
-First, get Cookiecutter. Trust me, it's awesome::
+Install Cookiecutter first::
 
     $ pip install "cookiecutter>=1.4.0"
 
