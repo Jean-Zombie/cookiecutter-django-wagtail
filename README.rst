@@ -36,7 +36,8 @@ production-ready Django projects quickly.
 Features
 ---------
 
-* For Django 2.0 *and* Wagtail CMS
+* For Django 2.0
+* **Wagtail CMS 2.4**
 * Works with Python 3.6
 * Renders Django projects with 100% starting test coverage
 * Twitter Bootstrap_ v4.1.1 (`maintained Foundation fork`_ also available)
@@ -91,39 +92,6 @@ Constraints
 * Only maintained 3rd party libraries are used.
 * Uses PostgreSQL everywhere (9.2+)
 * Environment variables for configuration (This won't work with Apache/mod_wsgi except on AWS ELB).
-
-Support this Project!
-----------------------
-
-This project is run by volunteers. Please support them in their efforts to maintain and improve Cookiecutter Django:
-
-* Daniel Roy Greenfeld, Project Lead (`GitHub <https://github.com/pydanny>`_, `Patreon <https://www.patreon.com/danielroygreenfeld>`_): expertise in Django and AWS ELB.
-
-* Nikita Shupeyko, Core Developer (`GitHub <https://github.com/webyneter>`_): expertise in Python/Django, hands-on DevOps and frontend experience.
-
-Projects that provide financial support to the maintainers:
-
-Two Scoops of Django 1.11
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. image:: https://cdn.shopify.com/s/files/1/0304/6901/products/tsd-111-alpha_medium.jpg?v=1499531513
-   :name: Two Scoops of Django 1.11 Cover
-   :align: center
-   :alt: Two Scoops of Django
-   :target: http://twoscoopspress.com/products/two-scoops-of-django-1-11
-
-Two Scoops of Django is the best dessert-themed Django reference in the universe
-
-pyup
-~~~~~~~~~~~~~~~~~~
-
-.. image:: https://pyup.io/static/images/logo.png
-   :name: pyup
-   :align: center
-   :alt: pyup
-   :target: https://pyup.io/
-
-Pyup brings you automated security and dependency updates used by Google and other organizations. Free for open source projects!
 
 Usage
 ------
