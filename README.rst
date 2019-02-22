@@ -1,4 +1,4 @@
-Cookiecutter Django Wagtail
+Cookiecutter Django *Wagtail-Edition*
 =======================
 
 .. image:: https://travis-ci.org/pydanny/cookiecutter-django.svg?branch=master
