@@ -5,10 +5,6 @@ Cookiecutter Django *Wagtail-Edition*
     :target: https://travis-ci.com/Jean-Zombie/cookiecutter-django-wagtail
     :alt: Build Status
 
-.. image:: https://pyup.io/repos/github/pydanny/cookiecutter-django/shield.svg
-    :target: https://pyup.io/repos/github/pydanny/cookiecutter-django/
-    :alt: Updates
-
 Cookiecutter-Django-Wagtail is a fork of the awesome `Cookiecutter Django`_ combined with the `Wagtail CMS`_. 
 
 * Documentation: https://cookiecutter-django.readthedocs.io/en/latest/
