@@ -12,6 +12,7 @@ Cookiecutter Django *Wagtail-Edition*
 Cookiecutter-Django-Wagtail is a fork of the awesome `Cookiecutter Django`_ combined with the `Wagtail CMS`_. 
 
 * Documentation: https://cookiecutter-django.readthedocs.io/en/latest/
+* Wagtail Documentation: https://docs.wagtail.io/en/stable/
 * See Troubleshooting_ for common errors and obstacles
 * If you have problems with Cookiecutter Django, please open issues_ don't send
   emails to the maintainers.
