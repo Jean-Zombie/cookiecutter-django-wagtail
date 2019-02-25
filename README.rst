@@ -10,7 +10,7 @@ Cookiecutter Django *Wagtail-Edition*
     :alt: Updates
 
 .. image:: https://badges.gitter.im/Join Chat.svg
-    :target: https://gitter.im/pydanny/cookiecutter-django?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+    :target: https://gitter.im/pydanny/cookiecutter-django?utm_sourc
 
 .. image:: https://www.codetriage.com/pydanny/cookiecutter-django/badges/users.svg
     :target: https://www.codetriage.com/pydanny/cookiecutter-django
@@ -20,6 +20,7 @@ Cookiecutter Django *Wagtail-Edition*
     :target: https://github.com/ambv/black
     :alt: Code style: black
 
+Cookiecutter-Django-Wagtail is a fork of the awesome Cookiecutter Django. 
 Powered by Cookiecutter_, Cookiecutter Django is a framework for jumpstarting
 production-ready Django projects quickly.
 
@@ -39,7 +40,6 @@ Features
 * For Django 2.0
 * **Wagtail CMS 2.4**
 * Works with Python 3.6
-* Renders Django projects with 100% starting test coverage
 * Twitter Bootstrap_ v4.1.1 (`maintained Foundation fork`_ also available)
 * 12-Factor_ based settings via django-environ_
 * Secure by default. We believe in SSL.

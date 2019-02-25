@@ -8,9 +8,9 @@ try:
 except ImportError:
     from distutils.core import setup
 
-# Our version ALWAYS matches the version of Django we support
-# If Django has a new release, we branch, tag, then update this setting after the tag.
-version = "2.0.2"
+# Our version ALWAYS matches the version of Wagtail we support
+# If Wagtail has a new release, we branch, tag, then update this setting after the tag.
+version = "2.4"
 
 if sys.argv[-1] == "tag":
     os.system('git tag -a %s -m "version %s"' % (version, version))
@@ -21,13 +21,13 @@ with open("README.rst") as readme_file:
     long_description = readme_file.read()
 
 setup(
-    name="cookiecutter-django",
+    name="cookiecutter-django-wagtail",
     version=version,
-    description="A Cookiecutter template for creating production-ready Django projects quickly.",
+    description="A Cookiecutter template for creating production-ready Wagtail projects quickly.",
     long_description=long_description,
-    author="Daniel Roy Greenfeld",
-    author_email="pydanny@gmail.com",
-    url="https://github.com/pydanny/cookiecutter-django",
+    author="Jean Zombie",
+    author_email="kappa_camus@tutanota.com",
+    url="https://github.com/Jean-Zombie/cookiecutter-django-wagtail.git",
     packages=[],
     license="BSD",
     zip_safe=False,
@@ -46,6 +46,6 @@ setup(
     ],
     keywords=(
         "cookiecutter, Python, projects, project templates, django, "
-        "skeleton, scaffolding, project directory, setup.py"
+        "skeleton, scaffolding, project directory, setup.py, wagtail, cms"
     ),
 )
