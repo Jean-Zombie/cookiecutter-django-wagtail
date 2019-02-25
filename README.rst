@@ -1,8 +1,8 @@
 Cookiecutter Django *Wagtail-Edition*
 =======================
 
-.. image:: https://travis-ci.org/pydanny/cookiecutter-django.svg?branch=master
-    :target: https://travis-ci.org/pydanny/cookiecutter-django?branch=master
+.. image:: https://travis-ci.com/Jean-Zombie/cookiecutter-django-wagtail.svg?token=p8pxxXak7Km36T3knwF2&branch=master
+    :target: https://travis-ci.com/Jean-Zombie/cookiecutter-django-wagtail
     :alt: Build Status
 
 .. image:: https://pyup.io/repos/github/pydanny/cookiecutter-django/shield.svg
