@@ -1,8 +1,8 @@
 Cookiecutter Django *Wagtail-Edition*
 =======================
 
-.. image:: https://travis-ci.com/Jean-Zombie/cookiecutter-django-wagtail.svg?token=p8pxxXak7Km36T3knwF2&branch=master
-    :target: https://travis-ci.com/Jean-Zombie/cookiecutter-django-wagtail
+.. image:: https://travis-ci.org/pydanny/cookiecutter-django.svg?branch=master
+    :target: https://travis-ci.org/pydanny/cookiecutter-django?branch=master
     :alt: Build Status
 
 Cookiecutter-Django-Wagtail is a fork of the awesome `Cookiecutter Django`_ combined with the `Wagtail CMS`_. 
