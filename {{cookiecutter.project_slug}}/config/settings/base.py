@@ -95,6 +95,9 @@ WAGTAIL = [
 
     'modelcluster',
     'taggit',
+
+    # Wagtails Rest Api
+    'wagtail.api.v2',
 ]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
