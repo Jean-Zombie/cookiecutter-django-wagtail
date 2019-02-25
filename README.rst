@@ -20,7 +20,7 @@ Cookiecutter Django *Wagtail-Edition*
     :target: https://github.com/ambv/black
     :alt: Code style: black
 
-Cookiecutter-Django-Wagtail is a fork of the awesome Cookiecutter Django. 
+Cookiecutter-Django-Wagtail is a fork of the awesome Cookiecutter Django_. 
 Powered by Cookiecutter_, Cookiecutter Django is a framework for jumpstarting
 production-ready Django projects quickly.
 
@@ -30,7 +30,8 @@ production-ready Django projects quickly.
   emails to the maintainers.
 
 .. _Troubleshooting: https://cookiecutter-django.readthedocs.io/en/latest/troubleshooting.html
-
+.. _Cokkiecutter: https://github.com/audreyr/cookiecutter.git
+.. _Cookiecutter Django: https://github.com/pydanny/cookiecutter-django.git
 .. _528: https://github.com/pydanny/cookiecutter-django/issues/528#issuecomment-212650373
 .. _issues: https://github.com/pydanny/cookiecutter-django/issues/new
 
