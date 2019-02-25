@@ -21,8 +21,7 @@ Cookiecutter-Django-Wagtail is a fork of the awesome `Cookiecutter Django`_ comb
 .. _Troubleshooting: https://cookiecutter-django.readthedocs.io/en/latest/troubleshooting.html
 .. _Cokkiecutter: https://github.com/audreyr/cookiecutter.git
 .. _Cookiecutter Django: https://github.com/pydanny/cookiecutter-django.git
-.. _528: https://github.com/pydanny/cookiecutter-django/issues/528#issuecomment-212650373
-.. _issues: https://github.com/pydanny/cookiecutter-django/issues/new
+.. _issues: https://github.com/Jean-Zombie/cookiecutter-django-wagtail/issues
 
 Features
 ---------

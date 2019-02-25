@@ -81,20 +81,20 @@ LOCAL_APPS = [
 
 # wagtail apps
 WAGTAIL = [
-'wagtail.contrib.forms',
-'wagtail.contrib.redirects',
-'wagtail.embeds',
-'wagtail.sites',
-'wagtail.users',
-'wagtail.snippets',
-'wagtail.documents',
-'wagtail.images',
-'wagtail.search',
-'wagtail.admin',
-'wagtail.core',
+    'wagtail.contrib.forms',
+    'wagtail.contrib.redirects',
+    'wagtail.embeds',
+    'wagtail.sites',
+    'wagtail.users',
+    'wagtail.snippets',
+    'wagtail.documents',
+    'wagtail.images',
+    'wagtail.search',
+    'wagtail.admin',
+    'wagtail.core',
 
-'modelcluster',
-'taggit',
+    'modelcluster',
+    'taggit',
 ]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
