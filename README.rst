@@ -9,18 +9,7 @@ Cookiecutter Django *Wagtail-Edition*
     :target: https://pyup.io/repos/github/pydanny/cookiecutter-django/
     :alt: Updates
 
-.. image:: https://badges.gitter.im/Join Chat.svg
-    :target: https://gitter.im/pydanny/cookiecutter-django?utm_sourc
-
-.. image:: https://www.codetriage.com/pydanny/cookiecutter-django/badges/users.svg
-    :target: https://www.codetriage.com/pydanny/cookiecutter-django
-    :alt: Code Helpers Badge
-
-.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
-    :target: https://github.com/ambv/black
-    :alt: Code style: black
-
-Cookiecutter-Django-Wagtail is a fork of the awesome `Cookiecutter Django`_ combined with the `Wagtail CMS`. 
+Cookiecutter-Django-Wagtail is a fork of the awesome `Cookiecutter Django`_ combined with the `Wagtail CMS`_. 
 
 * Documentation: https://cookiecutter-django.readthedocs.io/en/latest/
 * See Troubleshooting_ for common errors and obstacles
