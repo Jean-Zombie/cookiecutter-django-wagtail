@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% raw %}{% extends "base.html" %}
 {% load static wagtailcore_tags %}
 
 {% block body_class %}template-searchresults{% endblock %}
@@ -36,3 +36,4 @@
         No results found
     {% endif %}
 {% endblock %}
+{% endraw %}
