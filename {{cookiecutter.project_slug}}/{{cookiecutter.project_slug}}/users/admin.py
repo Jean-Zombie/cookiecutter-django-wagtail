@@ -6,12 +6,31 @@ from {{ cookiecutter.project_slug }}.users.forms import UserChangeForm, UserCrea
 
 User = get_user_model()
 
-
+# changed for django 2.1 see: https://github.com/pydanny/cookiecutter-django/issues/1654
 @admin.register(User)
 class UserAdmin(auth_admin.UserAdmin):
-
+    fieldsets = (
+        (_("Personal info"), {"fields": ("email",)}),
+        (
+            _("Permissions"),
+            {
+                "fields": (
+                    "is_active",
+                    "is_staff",
+                    "is_superuser",
+                    "groups",
+                    "user_permissions",
+                )
+            },
+        ),
+        (_("Important dates"), {"fields": ("last_login", "date_joined")}),
+    )
+    add_fieldsets = (
+        (None, {"classes": ("wide",), "fields": ("email", "password1", "password2")}),
+    )
     form = UserChangeForm
     add_form = UserCreationForm
-    fieldsets = (("User", {"fields": ("name",)}),) + auth_admin.UserAdmin.fieldsets
-    list_display = ["username", "name", "is_superuser"]
-    search_fields = ["name"]
+    list_display = ["email", "is_active", "is_staff", "is_superuser", "date_joined"]
+    list_filter = ["groups", "is_active", "is_staff", "is_superuser"]
+    search_fields = ["email"]
+    ordering = ["-date_joined"]
