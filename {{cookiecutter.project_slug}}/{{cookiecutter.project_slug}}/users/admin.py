@@ -10,9 +10,9 @@ User = get_user_model()
 @admin.register(User)
 class UserAdmin(auth_admin.UserAdmin):
     fieldsets = (
-        (_("Personal info"), {"fields": ("email",)}),
+        (("Personal info"), {"fields": ("email",)}),
         (
-            _("Permissions"),
+            ("Permissions"),
             {
                 "fields": (
                     "is_active",
@@ -23,7 +23,7 @@ class UserAdmin(auth_admin.UserAdmin):
                 )
             },
         ),
-        (_("Important dates"), {"fields": ("last_login", "date_joined")}),
+        (("Important dates"), {"fields": ("last_login", "date_joined")}),
     )
     add_fieldsets = (
         (None, {"classes": ("wide",), "fields": ("email", "password1", "password2")}),
