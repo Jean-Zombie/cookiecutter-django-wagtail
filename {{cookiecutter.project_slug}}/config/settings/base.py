@@ -57,6 +57,27 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 # APPS
 # ------------------------------------------------------------------------------
+# wagtail apps
+WAGTAIL = [
+    'wagtail.contrib.forms',
+    'wagtail.contrib.redirects',
+    'wagtail.embeds',
+    'wagtail.sites',
+    'wagtail.users',
+    'wagtail.snippets',
+    'wagtail.documents',
+    'wagtail.images',
+    'wagtail.search',
+    'wagtail.admin',
+    'wagtail.core',
+
+    'modelcluster',
+    'taggit',
+
+    # Wagtails Rest Api
+    'wagtail.api.v2',
+]
+
 DJANGO_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -77,24 +98,6 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     '{{ cookiecutter.project_slug }}.users.apps.UsersAppConfig',
     # Your stuff: custom apps go here
-]
-
-# wagtail apps
-WAGTAIL = [
-    'wagtail.contrib.forms',
-    'wagtail.contrib.redirects',
-    'wagtail.embeds',
-    'wagtail.sites',
-    'wagtail.users',
-    'wagtail.snippets',
-    'wagtail.documents',
-    'wagtail.images',
-    'wagtail.search',
-    'wagtail.admin',
-    'wagtail.core',
-
-    'modelcluster',
-    'taggit',
 ]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

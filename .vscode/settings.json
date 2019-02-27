@@ -1,0 +1,4 @@
+{
+    "python.linting.enabled": true,
+    "python.pythonPath": "/Users/ronald/.virtualenvs/django_cc/bin/python"
+}

@@ -36,6 +36,12 @@ services:
       - ./.envs/.local/.postgres
   {%- if cookiecutter.use_mailhog == 'y' %}
 
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
   mailhog:
     image: mailhog/mailhog:v1.0.0
     ports:
