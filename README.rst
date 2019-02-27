@@ -1,4 +1,4 @@
-Cookiecutter Django *Wagtail-Edition*
+Cookiecutter Django Wagtail
 =======================
 
 .. image:: https://travis-ci.com/Jean-Zombie/cookiecutter-django-wagtail.svg?token=p8pxxXak7Km36T3knwF2&branch=master
@@ -7,9 +7,10 @@ Cookiecutter Django *Wagtail-Edition*
 
 Cookiecutter-Django-Wagtail is a fork of the awesome `Cookiecutter Django`_ combined with the `Wagtail CMS`_. 
 
-* Documentation: https://cookiecutter-django.readthedocs.io/en/latest/
+
+* Cookiecutter Django Documentation: https://cookiecutter-django.readthedocs.io/en/latest/
 * Wagtail Documentation: https://docs.wagtail.io/en/stable/
-* See Troubleshooting_ for common errors and obstacles
+* See Troubleshooting_ (Cookiecutter Django) for common errors and obstacles
 * If you have problems with Cookiecutter Django, please open issues_ don't send
   emails to the maintainers.
 
@@ -19,10 +20,14 @@ Cookiecutter-Django-Wagtail is a fork of the awesome `Cookiecutter Django`_ comb
 .. _Cookiecutter Django: https://github.com/pydanny/cookiecutter-django.git
 .. _issues: https://github.com/Jean-Zombie/cookiecutter-django-wagtail/issues
 
+Disclaimer
+---------
+This is my first fork of anything. So I don't consider it production-ready. The build passes all tests but I most likely oversaw something. Specifically the compatibility to Django Version 2.1 needs further testing.
+
 Features
 ---------
 
-* For Django 2.0
+* For Django 2.1
 * **Wagtail CMS 2.4**
 * Works with Python 3.6
 * Twitter Bootstrap_ v4.1.1 (`maintained Foundation fork`_ also available)
