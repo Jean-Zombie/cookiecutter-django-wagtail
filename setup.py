@@ -23,7 +23,7 @@ with open("README.rst") as readme_file:
 setup(
     name="cookiecutter-django-wagtail",
     version=version,
-    description="A Cookiecutter template for creating production-ready Wagtail projects quickly.",
+    description="A Cookiecutter template for creating Wagtail projects quickly.",
     long_description=long_description,
     author="Jean Zombie",
     author_email="kappa_camus@tutanota.com",
