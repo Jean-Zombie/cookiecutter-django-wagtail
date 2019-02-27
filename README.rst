@@ -13,14 +13,11 @@ Cookiecutter-Django-Wagtail is a fork of the awesome `Cookiecutter Django`_ comb
 * Cookiecutter Django Documentation: https://cookiecutter-django.readthedocs.io/en/latest/
 * Wagtail Documentation: https://docs.wagtail.io/en/stable/
 * See Troubleshooting_ (Cookiecutter Django) for common errors and obstacles
-* If you have problems with Cookiecutter Django, please open issues_ don't send
-  emails to the maintainers.
 
 .. _Wagtail CMS: https://wagtail.io/
 .. _Troubleshooting: https://cookiecutter-django.readthedocs.io/en/latest/troubleshooting.html
 .. _Cokkiecutter: https://github.com/audreyr/cookiecutter.git
 .. _Cookiecutter Django: https://github.com/pydanny/cookiecutter-django.git
-.. _issues: https://github.com/Jean-Zombie/cookiecutter-django-wagtail/issues
 
 Disclaimer
 ---------
@@ -88,7 +85,7 @@ Constraints
 Usage
 ------
 
-Instead of using ``startproject``you will use Cookiecutter to set up your project. Cookiecutter will prompt you for some  technical and administrative question like your name, email, and various configuration issues.
+Instead of using Wagtail’s :code:`start` command you will use Cookiecutter to set up your project. Cookiecutter will prompt you for some  technical and administrative question like your name, email, and various configuration issues.
 
 Install Cookiecutter first::
 
@@ -98,7 +95,7 @@ Now run it against this repo::
 
     $ cookiecutter https://github.com/Jean-Zombie/cookiecutter-django-wagtail/
     
-You'll be prompted for some values. Provide them, then a Django project will be created for you.
+You'll be prompted for some values. Provide them, then a Wagtail project will be created for you.
 
 For local development, see the following:
 
