@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.urls import path, re_path
-from django.conf.urls import include, url
+from django.conf.urls import include
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.views import defaults as default_views
@@ -12,7 +12,7 @@ from wagtail.core import urls as wagtail_urls
 
 from search import views as search_views
 
-# Rest api 
+# Rest api
 from .api import api_router
 
 urlpatterns = [
@@ -29,7 +29,7 @@ urlpatterns = [
         include("stage_bios.users.urls", namespace="users"),
     ),
     path("accounts/", include("allauth.urls")),
-    
+
     # Rest api
     re_path(r'^api/v2/', api_router.urls),
 
@@ -44,17 +44,17 @@ urlpatterns = [
     # of your site, rather than the site root:
     #    url(r'^pages/', include(wagtail_urls)),
 
-]  + static(
+] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
 )
 
 if settings.DEBUG:
     # Wagtail settings: Serve static and media files from development server
     from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-    
+
     urlpatterns += staticfiles_urlpatterns()
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    
+
     # This allows the error pages to be debugged during development, just visit
     # these url in browser to see how these error pages look like.
     urlpatterns += [
