@@ -10,7 +10,7 @@ from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.documents import urls as wagtaildocs_urls
 from wagtail.core import urls as wagtail_urls
 
-from search import views as search_views
+from settings.base.APPS_DIR.search import views as search_views
 
 # Rest api
 from .api import api_router
@@ -26,7 +26,7 @@ urlpatterns = [
     # User management
     path(
         "users/",
-        include("stage_bios.users.urls", namespace="users"),
+        include("{{ cookiecutter.project_slug }}.users.urls", namespace="users"),
     ),
     path("accounts/", include("allauth.urls")),
 
