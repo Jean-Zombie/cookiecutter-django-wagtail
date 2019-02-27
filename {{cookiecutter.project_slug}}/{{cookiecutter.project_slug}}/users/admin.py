@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth import admin as auth_admin
 from django.contrib.auth import get_user_model
+from django.utils.translation import gettext as _
 
 from {{ cookiecutter.project_slug }}.users.forms import UserChangeForm, UserCreationForm
 
@@ -10,9 +11,9 @@ User = get_user_model()
 @admin.register(User)
 class UserAdmin(auth_admin.UserAdmin):
     fieldsets = (
-        (("Personal info"), {"fields": ("email",)}),
+        (_("Personal info"), {"fields": ("email",)}),
         (
-            ("Permissions"),
+            _("Permissions"),
             {
                 "fields": (
                     "is_active",
@@ -23,7 +24,7 @@ class UserAdmin(auth_admin.UserAdmin):
                 )
             },
         ),
-        (("Important dates"), {"fields": ("last_login", "date_joined")}),
+        (_("Important dates"), {"fields": ("last_login", "date_joined")}),
     )
     add_fieldsets = (
         (None, {"classes": ("wide",), "fields": ("email", "password1", "password2")}),
