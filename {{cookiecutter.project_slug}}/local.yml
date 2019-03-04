@@ -34,7 +34,6 @@ services:
       - local_postgres_data_backups:/backups
     env_file:
       - ./.envs/.local/.postgres
-  {%- if cookiecutter.use_mailhog == 'y' %}
 
   adminer:
     image: adminer
@@ -42,6 +41,7 @@ services:
     ports:
       - 8080:8080
 
+  {%- if cookiecutter.use_mailhog == 'y' %}
   mailhog:
     image: mailhog/mailhog:v1.0.0
     ports:
