@@ -134,8 +134,9 @@ EMAIL_SUBJECT_PREFIX = env('DJANGO_EMAIL_SUBJECT_PREFIX', default='[{{cookiecutt
 
 # ADMIN
 # ------------------------------------------------------------------------------
-# Django Admin URL regex.
-ADMIN_URL = env('DJANGO_ADMIN_URL')
+# Admin URL regex.
+DJANGO_ADMIN_URL = env('DJANGO_ADMIN_URL')
+WAGTAIL_ADMIN_URL = env('WAGTAIL_ADMIN_URL')
 
 # Anymail (Mailgun)
 # ------------------------------------------------------------------------------

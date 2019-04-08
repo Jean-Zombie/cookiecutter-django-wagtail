@@ -16,9 +16,10 @@ from {{ cookiecutter.project_slug }}.search import views as search_views
 from .api import api_router
 
 urlpatterns = [
-    re_path(r'^django-admin/', admin.site.urls),
-
-    re_path(r'^admin/', include(wagtailadmin_urls)),
+    # Django Admin, use {% raw %}{% url 'admin:index' %}{% endraw %}
+    path(settings.DJANGO_ADMIN_URL, admin.site.urls),
+    # Wagtail Admin
+    path(settings.WAGTAIL_ADMIN_URL, include(wagtailadmin_urls)),
     re_path(r'^documents/', include(wagtaildocs_urls)),
 
     re_path(r'^search/$', search_views.search, name='search'),

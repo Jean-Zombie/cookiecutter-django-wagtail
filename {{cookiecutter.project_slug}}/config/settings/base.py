@@ -256,7 +256,8 @@ EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND', default='django.core.mail.backends.s
 # ADMIN
 # ------------------------------------------------------------------------------
 # Django Admin URL.
-ADMIN_URL = 'admin/'
+DJANGO_ADMIN_URL = 'django-admin/'
+WAGTAIL_ADMIN_URL = "admin/"
 # https://docs.djangoproject.com/en/dev/ref/settings/#admins
 ADMINS = [
     ("""{{cookiecutter.author_name}}""", '{{cookiecutter.email}}'),
