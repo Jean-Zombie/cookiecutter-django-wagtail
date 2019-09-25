@@ -25,10 +25,7 @@ urlpatterns = [
     re_path(r'^search/$', search_views.search, name='search'),
 
     # User management
-    path(
-        "users/",
-        include("{{ cookiecutter.project_slug }}.users.urls", namespace="users"),
-    ),
+    path("users/", include("{{ cookiecutter.project_slug }}.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
 
     # Rest api

@@ -26,8 +26,8 @@ This is my first fork of anything. So I don't consider it production-ready. The 
 Features
 ---------
 
-* For Django 2.1
-* **Wagtail CMS 2.4**
+* For Django 2.2
+* **Wagtail CMS 2.6**
 * Works with Python 3.6
 * Twitter Bootstrap_ v4.1.1 (`maintained Foundation fork`_ also available)
 * 12-Factor_ based settings via django-environ_
@@ -37,11 +37,11 @@ Features
 * Comes with custom user model ready to go
 * Optional custom static build using Gulp and livereload
 * Send emails via Anymail_ (using Mailgun_ by default, but switchable)
-* Media storage using Amazon S3
-* Docker support using docker-compose_ for development and production (using Caddy_ with LetsEncrypt_ support)
+* Media storage using Amazon S3 or Google Cloud Storage
+* Docker support using docker-compose_ for development and production (using Traefik_ with LetsEncrypt_ support)
 * Procfile_ for deploying to Heroku
 * Instructions for deploying to PythonAnywhere_
-* Run tests with unittest or py.test
+* Run tests with unittest or pytest
 * Customizable PostgreSQL version
 
 .. _`maintained Foundation fork`: https://github.com/Parbhat/cookiecutter-django-foundation
@@ -52,7 +52,7 @@ Optional Integrations
 
 *These features can be enabled during initial project setup.*
 
-* Serve static files from Amazon S3 or Whitenoise_
+* Serve static files from Amazon S3, Google Cloud Storage or Whitenoise_
 * Configuration for Celery_ and Flower_ (the latter in Docker setup only)
 * Integration with MailHog_ for local email testing
 * Integration with Sentry_ for error logging
@@ -72,15 +72,15 @@ Optional Integrations
 .. _Sentry: https://sentry.io/welcome/
 .. _docker-compose: https://github.com/docker/compose
 .. _PythonAnywhere: https://www.pythonanywhere.com/
-.. _Caddy: https://caddyserver.com/
+.. _Traefik: https://traefik.io/
 .. _LetsEncrypt: https://letsencrypt.org/
 
 Constraints
 -----------
 
 * Only maintained 3rd party libraries are used.
-* Uses PostgreSQL everywhere (9.2+)
-* Environment variables for configuration (This won't work with Apache/mod_wsgi except on AWS ELB).
+* Uses PostgreSQL everywhere (9.4 - 11.3)
+* Environment variables for configuration (This won't work with Apache/mod_wsgi).
 
 Usage
 ------
