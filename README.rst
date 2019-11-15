@@ -27,9 +27,10 @@ Features
 ---------
 
 * For Django 2.2
-* **Wagtail CMS 2.6**
-* Works with Python 3.6
-* Twitter Bootstrap_ v4.1.1 (`maintained Foundation fork`_ also available)
+* **Wagtail CMS 2.7**
+* Works with Python 3.7
+* Renders Django projects with 100% starting test coverage
+* Twitter Bootstrap_ v4 (`maintained Foundation fork`_ also available)
 * 12-Factor_ based settings via django-environ_
 * Secure by default. We believe in SSL.
 * Optimized development and production settings
@@ -43,6 +44,7 @@ Features
 * Instructions for deploying to PythonAnywhere_
 * Run tests with unittest or pytest
 * Customizable PostgreSQL version
+* Default integration with pre-commit_ for identifying simple issues before submission to code review
 
 .. _`maintained Foundation fork`: https://github.com/Parbhat/cookiecutter-django-foundation
 
@@ -74,6 +76,7 @@ Optional Integrations
 .. _PythonAnywhere: https://www.pythonanywhere.com/
 .. _Traefik: https://traefik.io/
 .. _LetsEncrypt: https://letsencrypt.org/
+.. _pre-commit: https://github.com/pre-commit/pre-commit 
 
 Constraints
 -----------
