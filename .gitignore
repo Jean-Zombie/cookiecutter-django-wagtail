@@ -227,3 +227,4 @@ pip-selfcheck.json
 .idea/
 
 .pytest_cache/
+.vscode/settings.json
