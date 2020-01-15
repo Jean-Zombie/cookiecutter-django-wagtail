@@ -109,6 +109,15 @@ For local development, see the following:
 .. _`Developing locally`: http://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html
 .. _`Developing locally using docker`: http://cookiecutter-django.readthedocs.io/en/latest/developing-locally-docker.html
 
+Support Cookiecutter Django!
+----------------------
+
+The upstream of this repo, i.e. *Cookiecutter Django*, is run by volunteers. Please support them in their efforts to maintain and improve Cookiecutter Django:
+
+* Daniel Roy Greenfeld, Project Lead (`GitHub <https://github.com/pydanny>`_, `Patreon <https://www.patreon.com/danielroygreenfeld>`_): expertise in Django and AWS ELB.
+
+* Nikita Shupeyko, Core Developer (`GitHub <https://github.com/webyneter>`_): expertise in Python/Django, hands-on DevOps and frontend experience.
+
 
 Code of Conduct
 ---------------
