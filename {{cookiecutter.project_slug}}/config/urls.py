@@ -16,31 +16,31 @@ from {{ cookiecutter.project_slug }}.search import views as search_views
 from .api import api_router
 
 urlpatterns = [
-    # Django Admin, use {% raw %}{% url 'admin:index' %}{% endraw %}
+    # Django Admin, use {% raw %}{% url "admin:index" %}{% endraw %}
     path(settings.DJANGO_ADMIN_URL, admin.site.urls),
     # Wagtail Admin
     path(settings.WAGTAIL_ADMIN_URL, include(wagtailadmin_urls)),
-    re_path(r'^documents/', include(wagtaildocs_urls)),
+    re_path(r"^documents/", include(wagtaildocs_urls)),
 
-    re_path(r'^search/$', search_views.search, name='search'),
+    re_path(r"^search/$", search_views.search, name="search"),
 
     # User management
     path("users/", include("{{ cookiecutter.project_slug }}.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
 
     # Rest api
-    re_path(r'^api/v2/', api_router.urls),
+    re_path(r"^api/v2/", api_router.urls),
 
     # Your stuff: custom urls includes go here
 
     # For anything not caught by a more specific rule above, hand over to
-    # Wagtail's page serving mechanism. This should be the last pattern in
+    # Wagtail"s page serving mechanism. This should be the last pattern in
     # the list:
-    path('', include(wagtail_urls)),
+    path("", include(wagtail_urls)),
 
     # Alternatively, if you want Wagtail pages to be served from a subpath
     # of your site, rather than the site root:
-    #    url(r'^pages/', include(wagtail_urls)),
+    #    url(r"^pages/", include(wagtail_urls)),
 
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
