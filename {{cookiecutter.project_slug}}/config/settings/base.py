@@ -63,21 +63,19 @@ WSGI_APPLICATION = "config.wsgi.application"
 WAGTAIL = [
     "home",
     "search",
-
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
     "wagtail.embeds",
     "wagtail.sites",
-    "wagtail.users", "wagtail.snippets",
+    "wagtail.users", 
+    "wagtail.snippets",
     "wagtail.documents",
     "wagtail.images",
     "wagtail.search",
     "wagtail.admin",
     "wagtail.core",
-
     "modelcluster",
     "taggit",
-
     # Wagtails Rest Api
     "wagtail.api.v2",
 ]
@@ -166,7 +164,6 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.common.BrokenLinkEmailsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-
     "wagtail.core.middleware.SiteMiddleware",
     "wagtail.contrib.redirects.middleware.RedirectMiddleware",
 ]
