@@ -23,10 +23,6 @@ Cookiecutter-Django-Wagtail is a fork of the awesome `Cookiecutter Django`_ comb
 .. _Cokkiecutter: https://github.com/audreyr/cookiecutter.git
 .. _Cookiecutter Django: https://github.com/pydanny/cookiecutter-django.git
 
-Disclaimer
----------
-This is my first fork of anything. So I don't consider it production-ready. The build passes all tests but I most likely oversaw something. Specifically the compatibility to Django Version 2.1 needs further testing.
-
 Features
 ---------
 
