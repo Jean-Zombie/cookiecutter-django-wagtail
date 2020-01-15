@@ -61,7 +61,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 # ------------------------------------------------------------------------------
 # wagtail apps
 WAGTAIL = [
-    # "home",
+    "home",
     "search",
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
