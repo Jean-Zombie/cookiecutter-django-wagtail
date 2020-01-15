@@ -29,16 +29,13 @@ urlpatterns = [
     re_path(r"^api/v2/", api_router.urls),
     # Your stuff: custom urls includes go here
     # For anything not caught by a more specific rule above, hand over to
-    # Wagtail"s page serving mechanism. This should be the last pattern in
+    # Wagtail’s page serving mechanism. This should be the last pattern in
     # the list:
     path("", include(wagtail_urls)),
     # Alternatively, if you want Wagtail pages to be served from a subpath
     # of your site, rather than the site root:
     #    url(r"^pages/", include(wagtail_urls)),
-
-] + static(
-    settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
-)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     # Wagtail settings: Serve static and media files from development server
