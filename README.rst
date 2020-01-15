@@ -2,6 +2,10 @@
 .. image:: https://travis-ci.com/Jean-Zombie/cookiecutter-django-wagtail.svg?token=p8pxxXak7Km36T3knwF2&branch=master
     :target: https://travis-ci.com/Jean-Zombie/cookiecutter-django-wagtail
     :alt: Build Status
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/ambv/black
+    :alt: Code style: black
     
     
 Cookiecutter Django Wagtail
