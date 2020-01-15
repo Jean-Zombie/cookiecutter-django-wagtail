@@ -180,8 +180,8 @@ EMAIL_SUBJECT_PREFIX = env(
 # ADMIN
 # ------------------------------------------------------------------------------
 # Admin URL regex.
-DJANGO_ADMIN_URL = env('DJANGO_ADMIN_URL')
-WAGTAIL_ADMIN_URL = env('WAGTAIL_ADMIN_URL')
+DJANGO_ADMIN_URL = env("DJANGO_ADMIN_URL")
+WAGTAIL_ADMIN_URL = env("WAGTAIL_ADMIN_URL")
 
 # Anymail (Mailgun)
 # ------------------------------------------------------------------------------
