@@ -96,14 +96,8 @@ ENV/
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
 
-
 ### VisualStudioCode template
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
 
 ### Windows template
 # Windows thumbnail cache files
@@ -227,4 +221,3 @@ pip-selfcheck.json
 .idea/
 
 .pytest_cache/
-.vscode/settings.json
