@@ -45,7 +45,7 @@ LOCALE_PATHS = [ROOT_DIR.path("locale")]
 DATABASES = {"default": env.db("DATABASE_URL")}
 {%- else %}
 DATABASES = {
-    "default": env.db("DATABASE_URL", default="postgres://{% if cookiecutter.windows == 'y' %}localhost{% endif %}/{{cookiecutter.project_slug}}")
+    "default": env.db("DATABASE_URL", default="postgres://{% if cookiecutter.windows == "y" %}localhost{% endif %}/{{cookiecutter.project_slug}}")
 }
 {%- endif %}
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
@@ -61,26 +61,25 @@ WSGI_APPLICATION = "config.wsgi.application"
 # ------------------------------------------------------------------------------
 # wagtail apps
 WAGTAIL = [
-    'home',
-    'search',
+    "home",
+    "search",
 
-    'wagtail.contrib.forms',
-    'wagtail.contrib.redirects',
-    'wagtail.embeds',
-    'wagtail.sites',
-    'wagtail.users',
-    'wagtail.snippets',
-    'wagtail.documents',
-    'wagtail.images',
-    'wagtail.search',
-    'wagtail.admin',
-    'wagtail.core',
+    "wagtail.contrib.forms",
+    "wagtail.contrib.redirects",
+    "wagtail.embeds",
+    "wagtail.sites",
+    "wagtail.users", "wagtail.snippets",
+    "wagtail.documents",
+    "wagtail.images",
+    "wagtail.search",
+    "wagtail.admin",
+    "wagtail.core",
 
-    'modelcluster',
-    'taggit',
+    "modelcluster",
+    "taggit",
 
     # Wagtails Rest Api
-    'wagtail.api.v2',
+    "wagtail.api.v2",
 ]
 
 DJANGO_APPS = [
@@ -99,7 +98,7 @@ THIRD_PARTY_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "rest_framework",
-{%- if cookiecutter.use_celery == 'y' %}
+{%- if cookiecutter.use_celery == "y" %}
     "django_celery_beat",
 {%- endif %}
 ]
@@ -156,7 +155,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/dev/ref/settings/#middleware
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-{%- if cookiecutter.use_whitenoise == 'y' %}
+{%- if cookiecutter.use_whitenoise == "y" %}
     "whitenoise.middleware.WhiteNoiseMiddleware",
 {%- endif %}
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -168,8 +167,8 @@ MIDDLEWARE = [
     "django.middleware.common.BrokenLinkEmailsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 
-    'wagtail.core.middleware.SiteMiddleware',
-    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
+    "wagtail.core.middleware.SiteMiddleware",
+    "wagtail.contrib.redirects.middleware.RedirectMiddleware",
 ]
 
 # STATIC
@@ -255,7 +254,7 @@ EMAIL_TIMEOUT = 5
 # ADMIN
 # ------------------------------------------------------------------------------
 # Django Admin URL.
-DJANGO_ADMIN_URL = 'django-admin/'
+DJANGO_ADMIN_URL = "django-admin/"
 WAGTAIL_ADMIN_URL = "admin/"
 # https://docs.djangoproject.com/en/dev/ref/settings/#admins
 ADMINS = [("""{{cookiecutter.author_name}}""", "{{cookiecutter.email}}")]
@@ -286,7 +285,7 @@ LOGGING = {
     "root": {"level": "INFO", "handlers": ["console"]},
 }
 
-{% if cookiecutter.use_celery == 'y' -%}
+{% if cookiecutter.use_celery == "y" -%}
 # Celery
 # ------------------------------------------------------------------------------
 if USE_TZ:
@@ -326,7 +325,7 @@ ACCOUNT_ADAPTER = "{{cookiecutter.project_slug}}.users.adapters.AccountAdapter"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 SOCIALACCOUNT_ADAPTER = "{{cookiecutter.project_slug}}.users.adapters.SocialAccountAdapter"
 
-{% if cookiecutter.use_compressor == 'y' -%}
+{% if cookiecutter.use_compressor == "y" -%}
 # django-compressor
 # ------------------------------------------------------------------------------
 # https://django-compressor.readthedocs.io/en/latest/quickstart/#installation
@@ -335,4 +334,4 @@ STATICFILES_FINDERS += ["compressor.finders.CompressorFinder"]
 
 {%- endif %}
 # Your stuff...
-WAGTAIL_SITE_NAME = '{{cookiecutter.project_slug}}'
+WAGTAIL_SITE_NAME = "{{cookiecutter.project_slug}}"
