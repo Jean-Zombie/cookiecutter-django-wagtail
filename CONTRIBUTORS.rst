@@ -71,6 +71,7 @@ Listed in alphabetical order.
   Benjamin Abel
   Bert de Miranda          `@bertdemiranda`_
   Bo Lopker                `@blopker`_
+  Bo Peng                  `@BoPeng`_
   Bouke Haarsma
   Brent Payne              `@brentpayne`_               @brentpayne
   Bruce Olivier            `@bolivierjr`_
@@ -94,6 +95,7 @@ Listed in alphabetical order.
   Dan Shultz               `@shultz`_
   Dani Hodovic             `@danihodovic`_
   Daniel Hepper            `@dhepper`_                   @danielhepper
+  Daniel Hillier           `@danifus`_
   Daniele Tricoli          `@eriol`_
   David Díaz               `@ddiazpinto`_                @DavidDiazPinto
   Davit Tovmasyan          `@davitovmasyan`_
@@ -102,6 +104,7 @@ Listed in alphabetical order.
   Demetris Stavrou         `@demestav`_
   Denis Bobrov             `@delneg`_
   Denis Orehovsky          `@apirobot`_
+  Denis Savran             `@blaxpy`_
   Diane Chen               `@purplediane`_               @purplediane88
   Dónal Adams              `@epileptic-fish`_
   Dong Huynh               `@trungdong`_
@@ -116,11 +119,14 @@ Listed in alphabetical order.
   Gilbishkosma             `@Gilbishkosma`_
   Hamish Durkin            `@durkode`_
   Hana Quadara             `@hanaquadara`_
+  Harry Moreno             `@morenoh149`_                @morenoh149
   Harry Percival           `@hjwp`_
   Hendrik Schneider        `@hendrikschneider`_
   Henrique G. G. Pereira   `@ikkebr`_
   Ian Lee                  `@IanLee1521`_
   Irfan Ahmad              `@erfaan`_                    @erfaan
+  Isaac12x                 `@Isaac12x`_
+  Ivan Khomutov            `@ikhomutov`_
   Jan Van Bruggen          `@jvanbrug`_
   Jelmer Draaijer          `@foarsitter`_
   Jens Nilsson             `@phiberjenz`_
@@ -225,10 +231,12 @@ Listed in alphabetical order.
 .. _@arruda: https://github.com/arruda
 .. _@bertdemiranda: https://github.com/bertdemiranda
 .. _@bittner: https://github.com/bittner
+.. _@blaxpy: https://github.com/blaxpy
 .. _@bloodpet: https://github.com/bloodpet
 .. _@blopker: https://github.com/blopker
 .. _@bogdal: https://github.com/bogdal
 .. _@bolivierjr: https://github.com/bolivierjr
+.. _@BoPeng: https://github.com/BoPeng
 .. _@brentpayne: https://github.com/brentpayne
 .. _@btknu: https://github.com/btknu
 .. _@burhan: https://github.com/burhan
@@ -251,6 +259,7 @@ Listed in alphabetical order.
 .. _@curtisstpierre: https://github.com/curtisstpierre
 .. _@dadokkio: https://github.com/dadokkio
 .. _@danihodovic: https://github.com/danihodovic
+.. _@danifus: https://github.com/danifus
 .. _@davitovmasyan: https://github.com/davitovmasyan
 .. _@ddiazpinto: https://github.com/ddiazpinto
 .. _@delneg: https://github.com/delneg
@@ -280,7 +289,9 @@ Listed in alphabetical order.
 .. _@hendrikschneider: https://github.com/hendrikschneider
 .. _@hjwp: https://github.com/hjwp
 .. _@IanLee1521: https://github.com/IanLee1521
+.. _@ikhomutov: https://github.com/ikhomutov
 .. _@ikkebr: https://github.com/ikkebr
+.. _@Isaac12x: https://github.com/Isaac12x
 .. _@iynaix: https://github.com/iynaix
 .. _@jangeador: https://github.com/jangeador
 .. _@jazztpt: https://github.com/jazztpt
@@ -307,6 +318,7 @@ Listed in alphabetical order.
 .. _@minho42: https://github.com/minho42
 .. _@mjsisley: https://github.com/mjsisley
 .. _@mknapper1: https://github.com/mknapper1
+.. _@morenoh149: https://github.com/morenoh149
 .. _@mostaszewski: https://github.com/mostaszewski
 .. _@mozillazg: https://github.com/mozillazg
 .. _@mrcoles: https://github.com/mrcoles
