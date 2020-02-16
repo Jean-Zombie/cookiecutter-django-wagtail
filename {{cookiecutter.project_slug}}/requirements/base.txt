@@ -36,4 +36,6 @@ coreapi==2.3.3  # https://github.com/core-api/python-client
 
 # Wagtail
 # ------------------------------------------------------------------------------
-wagtail==2.7 # https://github.com/wagtail/wagtail
+# Wagtail
+# ------------------------------------------------------------------------------
+wagtail>=2.8<2.9  # https://github.com/wagtail/wagtail

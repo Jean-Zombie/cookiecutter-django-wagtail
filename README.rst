@@ -11,14 +11,14 @@
 Cookiecutter Django Wagtail
 =======================
 
-Cookiecutter-Django-Wagtail is a fork of the awesome `Cookiecutter Django`_ combined with the `Wagtail CMS`_. 
+Cookiecutter-Django-Wagtail is a fork of the awesome `Cookiecutter Django`_ combined with `Wagtail`_. 
 
 
 * Cookiecutter Django Documentation: https://cookiecutter-django.readthedocs.io/en/latest/
 * Wagtail Documentation: https://docs.wagtail.io/en/stable/
 * See Troubleshooting_ (Cookiecutter Django) for common errors and obstacles
 
-.. _Wagtail CMS: https://wagtail.io/
+.. _Wagtail: https://wagtail.io/
 .. _Troubleshooting: https://cookiecutter-django.readthedocs.io/en/latest/troubleshooting.html
 .. _Cokkiecutter: https://github.com/audreyr/cookiecutter.git
 .. _Cookiecutter Django: https://github.com/pydanny/cookiecutter-django.git
@@ -27,7 +27,7 @@ Features
 ---------
 
 * For Django 2.2
-* **Wagtail CMS 2.7**
+* **Wagtail 2.8**
 * Works with Python 3.7
 * Renders Django projects with 100% starting test coverage
 * Twitter Bootstrap_ v4 (`maintained Foundation fork`_ also available)
