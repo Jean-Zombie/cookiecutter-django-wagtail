@@ -4,6 +4,9 @@ from django.conf.urls import include
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.views import defaults as default_views
+{% if cookiecutter.use_drf == 'y' -%}
+from rest_framework.authtoken.views import obtain_auth_token
+{%- endif %}
 
 # wagtail specific
 from wagtail.admin import urls as wagtailadmin_urls
@@ -36,6 +39,15 @@ urlpatterns = [
     # of your site, rather than the site root:
     #    url(r"^pages/", include(wagtail_urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+{% if cookiecutter.use_drf == 'y' -%}
+# API URLS
+urlpatterns += [
+    # API base url
+    path("api/", include("config.api_router")),
+    # DRF auth token
+    path("auth-token/", obtain_auth_token),
+]
+{%- endif %}
 
 if settings.DEBUG:
     # Wagtail settings: Serve static and media files from development server
