@@ -63,6 +63,7 @@ Listed in alphabetical order.
   Anuj Bansal              `@ahhda`_
   Arcuri Davide            `@dadokkio`_
   Areski Belaid            `@areski`_
+  Arkadiusz Michał Ryś     `@arkadiuszmichalrys`_
   Ashley Camba
   Barclay Gauld            `@yunti`_
   Bartek                   `@btknu`_
@@ -87,6 +88,7 @@ Listed in alphabetical order.
   Chris Pappalardo         `@ChrisPappalardo`_
   Christopher Clarke       `@chrisdev`_
   Cole Mackenzie           `@cmackenzie1`_
+  Cole Maclean             `@cole`_                      @cole
   Collederas               `@Collederas`_
   Craig Margieson          `@cmargieson`_
   Cristian Vargas          `@cdvv7788`_
@@ -205,6 +207,7 @@ Listed in alphabetical order.
   Tubo Shi                 `@Tubo`_
   Umair Ashraf             `@umrashrf`_                 @fabumair
   Vadim Iskuchekov         `@Egregors`_                 @egregors
+  Vicente G. Reyes         `@reyesvicente`_             @highcenburg
   Vitaly Babiy
   Vivian Guillen           `@viviangb`_
   Vlad Doster              `@vladdoster`_
@@ -231,6 +234,7 @@ Listed in alphabetical order.
 .. _@apirobot: https://github.com/apirobot
 .. _@archinal: https://github.com/archinal
 .. _@areski: https://github.com/areski
+.. _@arkadiuszmichalrys: https://github.com/ArkadiuszMichalRys
 .. _@arruda: https://github.com/arruda
 .. _@bertdemiranda: https://github.com/bertdemiranda
 .. _@bittner: https://github.com/bittner
@@ -258,6 +262,7 @@ Listed in alphabetical order.
 .. _@chuckus: https://github.com/chuckus
 .. _@cmackenzie1: https://github.com/cmackenzie1
 .. _@cmargieson: https://github.com/cmargieson
+.. _@cole: https://github.com/cole
 .. _@Collederas: https://github.com/Collederas
 .. _@curtisstpierre: https://github.com/curtisstpierre
 .. _@dadokkio: https://github.com/dadokkio
@@ -340,6 +345,7 @@ Listed in alphabetical order.
 .. _@purplediane: https://github.com/purplediane
 .. _@raonyguimaraes: https://github.com/raonyguimaraes
 .. _@reggieriser: https://github.com/reggieriser
+.. _@reyesvicente: https://github.com/reyesvicente
 .. _@rm--: https://github.com/rm--
 .. _@rolep: https://github.com/rolep
 .. _@romanosipenko: https://github.com/romanosipenko
