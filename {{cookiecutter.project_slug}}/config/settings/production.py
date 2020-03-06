@@ -66,13 +66,13 @@ SECURE_CONTENT_TYPE_NOSNIFF = env.bool(
     "DJANGO_SECURE_CONTENT_TYPE_NOSNIFF", default=True
 )
 
-{% if cookiecutter.cloud_provider != 'None' -%}
+{% if cookiecutter.cloud_provider != "None" or cookiecutter.cloud_provider != "ngnix" -%}
 # STORAGES
 # ------------------------------------------------------------------------------
 # https://django-storages.readthedocs.io/en/latest/#installation
 INSTALLED_APPS += ["storages"]  # noqa F405
 {%- endif -%}
-{% if cookiecutter.cloud_provider == 'AWS' %}
+{% if cookiecutter.cloud_provider == "AWS" %}
 # https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html#settings
 AWS_ACCESS_KEY_ID = env("DJANGO_AWS_ACCESS_KEY_ID")
 # https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html#settings
