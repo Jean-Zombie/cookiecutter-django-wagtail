@@ -1,28 +1,27 @@
 from django.conf import settings
-from django.urls import path, re_path, include
-from django.conf.urls import include
 from django.conf.urls.static import static
 from django.contrib import admin
 {%- if cookiecutter.use_async == 'y' %}
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 {%- endif %}
+from django.urls import include, path, re_path
 from django.views import defaults as default_views
 from django.views.generic import TemplateView
+
 {%- if cookiecutter.use_drf == 'y' %}
 from rest_framework.authtoken.views import obtain_auth_token
 {%- endif %}
+from wagtail.documents import urls as wagtaildocs_urls  # noqa isort:skip
+from wagtail.core import urls as wagtail_urls  # noqa isort:skip
+from wagtail.admin import urls as wagtailadmin_urls  # noqa isort:skip
 
-# wagtail specific
-from wagtail.admin import urls as wagtailadmin_urls
-from wagtail.documents import urls as wagtaildocs_urls
-from wagtail.core import urls as wagtail_urls
-
-from {{ cookiecutter.project_slug }}.search import views as search_views
-
-# Rest api
-from .api import api_router
+from {{ cookiecutter.project_slug }}.search import views as search_views  # noqa isort:skip
 
 urlpatterns = [
+    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    path(
+        "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
+    ),
     # Django Admin, use {% raw %}{% url "admin:index" %}{% endraw %}
     path(settings.DJANGO_ADMIN_URL, admin.site.urls),
     # Wagtail Admin
@@ -32,8 +31,6 @@ urlpatterns = [
     # User management
     path("users/", include("{{ cookiecutter.project_slug }}.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
-    # Rest api
-    re_path(r"^api/v2/", api_router.urls),
     # Your stuff: custom urls includes go here
     # For anything not caught by a more specific rule above, hand over to
     # Wagtail’s page serving mechanism. This should be the last pattern in
@@ -64,7 +61,6 @@ if settings.DEBUG:
 
     urlpatterns += staticfiles_urlpatterns()
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
     # This allows the error pages to be debugged during development, just visit
     # these url in browser to see how these error pages look like.
     urlpatterns += [

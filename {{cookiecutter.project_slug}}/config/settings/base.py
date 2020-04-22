@@ -75,8 +75,6 @@ WAGTAIL = [
     "wagtail.core",
     "modelcluster",
     "taggit",
-    # Wagtails Rest Api
-    "wagtail.api.v2",
 ]
 
 DJANGO_APPS = [
