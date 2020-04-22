@@ -26,9 +26,8 @@ Cookiecutter-Django-Wagtail is a fork of the awesome `Cookiecutter Django`_ comb
 Features
 ---------
 
-* For Django 2.2
-* **Wagtail 2.8**
-* Works with Python 3.7
+* For Django 3.0 & Wagtail 2.8
+* Works with Python 3.8
 * Renders Django projects with 100% starting test coverage
 * Twitter Bootstrap_ v4 (`maintained Foundation fork`_ also available)
 * 12-Factor_ based settings via django-environ_
@@ -36,8 +35,9 @@ Features
 * Optimized development and production settings
 * Registration via django-allauth_
 * Comes with custom user model ready to go
+* Optional basic ASGI setup for Websockets
 * Optional custom static build using Gulp and livereload
-* Send emails via Anymail_ (using Mailgun_ by default, but switchable)
+* Send emails via Anymail_ (using Mailgun_ by default or Amazon SES if AWS is selected cloud provider, but switchable)
 * Media storage using Amazon S3 or Google Cloud Storage
 * Docker support using docker-compose_ for development and production (using Traefik_ with LetsEncrypt_ support)
 * Procfile_ for deploying to Heroku
@@ -76,7 +76,7 @@ Optional Integrations
 .. _PythonAnywhere: https://www.pythonanywhere.com/
 .. _Traefik: https://traefik.io/
 .. _LetsEncrypt: https://letsencrypt.org/
-.. _pre-commit: https://github.com/pre-commit/pre-commit 
+.. _pre-commit: https://github.com/pre-commit/pre-commit
 
 Constraints
 -----------
@@ -92,7 +92,7 @@ Instead of using Wagtail’s :code:`start` command you will use Cookiecutter to 
 
 Install Cookiecutter first::
 
-    $ pip install "cookiecutter>=1.4.0"
+    $ pip install "cookiecutter>=1.7.0"
 
 Now run it against this repo::
 

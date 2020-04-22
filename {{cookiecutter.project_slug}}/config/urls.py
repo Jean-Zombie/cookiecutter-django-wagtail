@@ -1,10 +1,14 @@
 from django.conf import settings
-from django.urls import path, re_path
+from django.urls import path, re_path, include
 from django.conf.urls import include
 from django.conf.urls.static import static
 from django.contrib import admin
+{%- if cookiecutter.use_async == 'y' %}
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+{%- endif %}
 from django.views import defaults as default_views
-{% if cookiecutter.use_drf == 'y' -%}
+from django.views.generic import TemplateView
+{%- if cookiecutter.use_drf == 'y' %}
 from rest_framework.authtoken.views import obtain_auth_token
 {%- endif %}
 
@@ -39,7 +43,12 @@ urlpatterns = [
     # of your site, rather than the site root:
     #    url(r"^pages/", include(wagtail_urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-{% if cookiecutter.use_drf == 'y' -%}
+{%- if cookiecutter.use_async == 'y' %}
+if settings.DEBUG:
+    # Static file serving when using Gunicorn + Uvicorn for local web socket development
+    urlpatterns += staticfiles_urlpatterns()
+{%- endif %}
+{% if cookiecutter.use_drf == 'y' %}
 # API URLS
 urlpatterns += [
     # API base url
