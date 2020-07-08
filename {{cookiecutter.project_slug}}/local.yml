@@ -54,13 +54,6 @@ services:
     
   {%- if cookiecutter.use_mailhog == 'y' %}
 
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
-
-  {%- if cookiecutter.use_mailhog == 'y' %}
   mailhog:
     image: mailhog/mailhog:v1.0.0
     container_name: mailhog
