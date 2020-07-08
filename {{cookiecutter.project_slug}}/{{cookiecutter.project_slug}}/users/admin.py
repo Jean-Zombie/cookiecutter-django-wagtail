@@ -7,6 +7,7 @@ from {{ cookiecutter.project_slug }}.users.forms import UserChangeForm, UserCrea
 
 User = get_user_model()
 
+
 # changed for django 2.1 see: https://github.com/pydanny/cookiecutter-django/issues/1654
 @admin.register(User)
 class UserAdmin(auth_admin.UserAdmin):
