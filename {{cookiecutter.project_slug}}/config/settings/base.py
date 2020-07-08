@@ -347,3 +347,4 @@ REST_FRAMEWORK = {
 {%- endif %}
 # Your stuff...
 WAGTAIL_SITE_NAME = "{{cookiecutter.project_slug}}"
+BASE_URL = "https://{{cookiecutter.project_slug}}"
