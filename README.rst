@@ -3,6 +3,10 @@
     :target: https://travis-ci.com/Jean-Zombie/cookiecutter-django-wagtail
     :alt: Build Status
 
+.. image:: https://readthedocs.org/projects/cookiecutter-django/badge/?version=latest
+    :target: https://cookiecutter-django.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/ambv/black
     :alt: Code style: black
@@ -26,7 +30,7 @@ Cookiecutter-Django-Wagtail is a fork of the awesome `Cookiecutter Django`_ comb
 Features
 ---------
 
-* For Django 3.0 & Wagtail 2.9
+* For Django 3 & Wagtail 2.9
 * Works with Python 3.8
 * Renders Django projects with 100% starting test coverage
 * Twitter Bootstrap_ v4 (`maintained Foundation fork`_ also available)
