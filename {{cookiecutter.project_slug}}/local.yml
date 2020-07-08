@@ -10,6 +10,7 @@ services:
       context: .
       dockerfile: ./compose/local/django/Dockerfile
     image: {{ cookiecutter.project_slug }}_local_django
+    container_name: django
     depends_on:
       - postgres
       {%- if cookiecutter.use_mailhog == 'y' %}
@@ -29,11 +30,29 @@ services:
       context: .
       dockerfile: ./compose/production/postgres/Dockerfile
     image: {{ cookiecutter.project_slug }}_production_postgres
+    container_name: postgres
     volumes:
       - local_postgres_data:/var/lib/postgresql/data
       - local_postgres_data_backups:/backups
     env_file:
       - ./.envs/.local/.postgres
+
+  docs:
+    image: {{ cookiecutter.project_slug }}_local_docs
+    container_name: docs
+    build:
+      context: .
+      dockerfile: ./compose/local/docs/Dockerfile
+    env_file:
+      - ./.envs/.local/.django
+    volumes:
+      - ./docs:/docs
+      - ./config:/app/config
+      - ./{{ cookiecutter.project_slug }}:/app/{{ cookiecutter.project_slug }}
+    ports:
+      - "7000:7000"
+    
+  {%- if cookiecutter.use_mailhog == 'y' %}
 
   adminer:
     image: adminer
@@ -44,6 +63,7 @@ services:
   {%- if cookiecutter.use_mailhog == 'y' %}
   mailhog:
     image: mailhog/mailhog:v1.0.0
+    container_name: mailhog
     ports:
       - "8025:8025"
 
@@ -52,10 +72,12 @@ services:
 
   redis:
     image: redis:5.0
+    container_name: redis
 
   celeryworker:
     <<: *django
     image: {{ cookiecutter.project_slug }}_local_celeryworker
+    container_name: celeryworker
     depends_on:
       - redis
       - postgres
@@ -68,6 +90,7 @@ services:
   celerybeat:
     <<: *django
     image: {{ cookiecutter.project_slug }}_local_celerybeat
+    container_name: celerybeat
     depends_on:
       - redis
       - postgres
@@ -80,6 +103,7 @@ services:
   flower:
     <<: *django
     image: {{ cookiecutter.project_slug }}_local_flower
+    container_name: flower
     ports:
       - "5555:5555"
     command: /start-flower
@@ -92,6 +116,7 @@ services:
       context: .
       dockerfile: ./compose/local/node/Dockerfile
     image: {{ cookiecutter.project_slug }}_local_node
+    container_name: node
     depends_on:
       - django
     volumes:
