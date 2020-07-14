@@ -6,6 +6,10 @@ DJANGO_SECRET_KEY=!!!SET DJANGO_SECRET_KEY!!!
 DJANGO_ADMIN_URL=!!!SET DJANGO_ADMIN_URL!!!
 DJANGO_ALLOWED_HOSTS=.{{ cookiecutter.domain_name }}
 
+# Wagtail
+# ------------------------------------------------------------------------------
+WAGTAIL_ADMIN_URL=!!!SET WAGTAIL_ADMIN_URL!!!
+
 # Security
 # ------------------------------------------------------------------------------
 # TIP: better off using DNS, however, redirect is OK too
