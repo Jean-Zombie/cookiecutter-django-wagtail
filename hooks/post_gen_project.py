@@ -199,6 +199,16 @@ def set_django_admin_url(file_path):
     )
     return django_admin_url
 
+def set_wagtail_admin_url(file_path):
+    wagtail_admin_url = set_flag(
+        file_path,
+        "!!!SET WAGTAIL_ADMIN_URL!!!",
+        formatted="{}/",
+        length=32,
+        using_digits=True,
+        using_ascii_letters=True,
+    )
+    return wagtail_admin_url
 
 def generate_random_user():
     return generate_random_string(length=32, using_ascii_letters=True)
@@ -258,6 +268,8 @@ def set_flags_in_envs(postgres_user, celery_flower_user, debug=False):
 
     set_django_secret_key(production_django_envs_path)
     set_django_admin_url(production_django_envs_path)
+    
+    set_wagtail_admin_url(production_django_envs_path)
 
     set_postgres_user(local_postgres_envs_path, value=postgres_user)
     set_postgres_password(
