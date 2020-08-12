@@ -30,8 +30,8 @@ Cookiecutter-Django-Wagtail is a fork of the awesome `Cookiecutter Django`_ comb
 Features
 ---------
 
-* For Django 3
-* **Wagtail 2.9**
+* For Django 3 (3.0.9)
+* **Wagtail 2.10**
 * Works with Python 3.8
 * Renders Django projects with 100% starting test coverage
 * Twitter Bootstrap_ v4 (`maintained Foundation fork`_ also available)
