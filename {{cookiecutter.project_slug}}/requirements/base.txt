@@ -45,5 +45,5 @@ django-cors-headers==3.5.0 # https://github.com/adamchainz/django-cors-headers
 {%- endif %}
 # Wagtail
 # ------------------------------------------------------------------------------
-wagtail==2.10  # https://github.com/wagtail/wagtail
+wagtail==2.10.1  # https://github.com/wagtail/wagtail
 
