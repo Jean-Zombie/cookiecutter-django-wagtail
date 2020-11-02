@@ -1,9 +1,11 @@
-name: Update Contributors
+name: Update Changelog
 
 on:
-  push:
-    branches:
-      - master
+  # Every day at 2am
+  schedule:
+    - cron: "0 2 * * *"
+  # Manual trigger
+  workflow_dispatch:
 
 jobs:
   build:
@@ -21,10 +23,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Update list
-      run: python scripts/update_contributors.py
+      run: python scripts/update_changelog.py
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v4.6.0
       with:
-        commit_message: Update Contributors
-        file_pattern: CONTRIBUTORS.md .github/contributors.json
+        commit_message: Update Changelog
+        file_pattern: CHANGELOG.md

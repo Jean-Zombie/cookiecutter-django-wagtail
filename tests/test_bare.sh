@@ -1,9 +1,10 @@
 #!/bin/sh
 # this is a very simple script that tests the docker configuration for cookiecutter-django
 # it is meant to be run from the root directory of the repository, eg:
-# sh tests/test_docker.sh
+# sh tests/test_bare.sh
 
 set -o errexit
+set -x
 
 # Install modern pip to use new resolver:
 # https://blog.python.org/2020/07/upgrade-pip-20-2-changes-20-3.html
