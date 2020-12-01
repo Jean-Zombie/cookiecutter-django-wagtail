@@ -24,8 +24,7 @@ flower==0.9.5  # https://github.com/mher/flower
 {%- endif %}
 {%- endif %}
 {%- if cookiecutter.use_async == 'y' %}
-uvicorn==0.12.2  # https://github.com/encode/uvicorn
-wsproto==0.15.0  # https://github.com/python-hyper/wsproto/
+uvicorn[standard]==0.12.3  # https://github.com/encode/uvicorn
 {%- endif %}
 
 # Django
@@ -33,8 +32,8 @@ wsproto==0.15.0  # https://github.com/python-hyper/wsproto/
 django==3.0.11  # pyup: < 3.1  # https://www.djangoproject.com/
 django-environ==0.4.5  # https://github.com/joke2k/django-environ
 django-model-utils==4.0.0  # https://github.com/jazzband/django-model-utils
-django-allauth==0.43.0  # https://github.com/pennersr/django-allauth
-django-crispy-forms==1.9.2  # https://github.com/django-crispy-forms/django-crispy-forms
+django-allauth==0.44.0  # https://github.com/pennersr/django-allauth
+django-crispy-forms==1.10.0  # https://github.com/django-crispy-forms/django-crispy-forms
 {%- if cookiecutter.use_compressor == "y" %}
 django-compressor==2.4  # https://github.com/django-compressor/django-compressor
 {%- endif %}

@@ -657,6 +657,13 @@ Listed in alphabetical order.
     <td></td>
   </tr>
   <tr>
+    <td>Fabian Affolter</td>
+    <td>
+      <a href="https://github.com/fabaff">fabaff</a>
+    </td>
+    <td>fabaff</td>
+  </tr>
+  <tr>
     <td>Felipe Arruda</td>
     <td>
       <a href="https://github.com/arruda">arruda</a>
@@ -793,6 +800,13 @@ Listed in alphabetical order.
     <td>Ivan Khomutov</td>
     <td>
       <a href="https://github.com/ikhomutov">ikhomutov</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Jakub Musko</td>
+    <td>
+      <a href="https://github.com/umgelurgel">umgelurgel</a>
     </td>
     <td></td>
   </tr>
@@ -1271,6 +1285,13 @@ Listed in alphabetical order.
       <a href="https://github.com/saschalalala">saschalalala</a>
     </td>
     <td>saschalalala</td>
+  </tr>
+  <tr>
+    <td>Simon Rey</td>
+    <td>
+      <a href="https://github.com/eqqe">eqqe</a>
+    </td>
+    <td></td>
   </tr>
   <tr>
     <td>Sorasful</td>

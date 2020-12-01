@@ -1,11 +1,6 @@
-
-.. image:: https://travis-ci.com/Jean-Zombie/cookiecutter-django-wagtail.svg?token=p8pxxXak7Km36T3knwF2&branch=master
-    :target: https://travis-ci.com/Jean-Zombie/cookiecutter-django-wagtail
+.. image:: https://img.shields.io/github/workflow/status/Jean-Zombie/cookiecutter-django-wagtail/CI/master
+    :target: https://github.com/Jean-Zombie/cookiecutter-django-wagtail/actions?query=workflow%3ACI
     :alt: Build Status
-
-.. image:: https://readthedocs.org/projects/cookiecutter-django/badge/?version=latest
-    :target: https://cookiecutter-django.readthedocs.io/en/latest/?badge=latest
-    :alt: Documentation Status
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/ambv/black

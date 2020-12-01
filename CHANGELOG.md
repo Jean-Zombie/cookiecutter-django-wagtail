@@ -3,6 +3,52 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 <!-- GENERATOR_PLACEHOLDER -->
 
+## [2020-11-26]
+### Updated
+- Update django-extensions to 3.1.0 ([#2947](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2947))
+- Update pre-commit to 2.9.2 ([#2948](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2948))
+- Update django-allauth to 0.44.0 ([#2945](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2945))
+
+## [2020-11-25]
+### Changed
+- Bump peter-evans/create-pull-request from v3.5.0 to v3.5.1 ([#2944](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2944))
+
+## [2020-11-23]
+### Updated
+- Update uvicorn to 0.12.3 ([#2943](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2943))
+- Update pre-commit to 2.9.0 ([#2942](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2942))
+
+## [2020-11-21]
+### Changed
+- Fix after uvicorn 0.12.0 - Ship extra dependencies ([#2939](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2939))
+
+## [2020-11-20]
+### Updated
+- Update sentry-sdk to 0.19.4 ([#2938](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2938))
+
+## [2020-11-19]
+### Updated
+- Update django-crispy-forms to 1.10.0 ([#2937](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2937))
+
+## [2020-11-17]
+### Changed
+- Bump peter-evans/create-pull-request from v2 to v3.5.0 ([#2936](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2936))
+
+## [2020-11-15]
+### Changed
+- Fix formatting in docs ([#2935](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2935))
+
+## [2020-11-13]
+### Changed
+- Upgrade factory-boy to 3.1.0 ([#2932](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2932))
+### Updated
+- Update sentry-sdk to 0.19.3 ([#2933](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2933))
+- Update sphinx to 3.3.1 ([#2934](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2934))
+
+## [2020-11-12]
+### Changed
+- Migrate CI to Github Actions ([#2931](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2931))
+
 ## [2020-11-06]
 ### Updated
 - Update djangorestframework to 3.12.2 ([#2930](https://api.github.com/repos/pydanny/cookiecutter-django/pulls/2930))
