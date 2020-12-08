@@ -19,6 +19,7 @@ hiredis==1.1.0  # https://github.com/redis/hiredis-py
 {%- if cookiecutter.use_celery == "y" %}
 celery==4.4.6  # pyup: < 5.0,!=4.4.7  # https://github.com/celery/celery
 django-celery-beat==2.1.0  # https://github.com/celery/django-celery-beat
+django-timezone-field==4.0  # https://github.com/celery/django-celery-beat/pull/378
 {%- if cookiecutter.use_docker == 'y' %}
 flower==0.9.5  # https://github.com/mher/flower
 {%- endif %}
@@ -31,7 +32,7 @@ uvicorn[standard]==0.12.3  # https://github.com/encode/uvicorn
 # ------------------------------------------------------------------------------
 django==3.0.11  # pyup: < 3.1  # https://www.djangoproject.com/
 django-environ==0.4.5  # https://github.com/joke2k/django-environ
-django-model-utils==4.0.0  # https://github.com/jazzband/django-model-utils
+django-model-utils==4.1.1  # https://github.com/jazzband/django-model-utils
 django-allauth==0.44.0  # https://github.com/pennersr/django-allauth
 django-crispy-forms==1.10.0  # https://github.com/django-crispy-forms/django-crispy-forms
 {%- if cookiecutter.use_compressor == "y" %}
