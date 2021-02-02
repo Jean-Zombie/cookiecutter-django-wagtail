@@ -9,8 +9,8 @@ class User(AbstractUser):
 
     #: First and last name do not cover name patterns around the globe
     name = CharField(_("Name of User"), blank=True, max_length=255)
-    first_name = None  # type: ignore
-    last_name = None  # type: ignore
+    first_name = CharField(max_length=150, blank=True, verbose_name="first name")
+    last_name = CharField(max_length=150, blank=True, verbose_name="last name")
 
     def get_absolute_url(self):
         """Get url for user's detail view.
