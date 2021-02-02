@@ -26,7 +26,7 @@ Features
 ---------
 
 * For Django 3 (3.0.10)
-* **Wagtail 2.11.2**
+* **Wagtail 2.11.3**
 * Works with Python 3.8
 * Renders Django projects with 100% starting test coverage
 * Twitter Bootstrap_ v4 (`maintained Foundation fork`_ also available)
