@@ -867,6 +867,13 @@ Listed in alphabetical order.
     <td>afrowave</td>
   </tr>
   <tr>
+    <td>John</td>
+    <td>
+      <a href="https://github.com/thorrak">thorrak</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>John Cass</td>
     <td>
       <a href="https://github.com/jcass77">jcass77</a>
@@ -1217,6 +1224,13 @@ Listed in alphabetical order.
     <td></td>
   </tr>
   <tr>
+    <td>PJ Hoberman</td>
+    <td>
+      <a href="https://github.com/pjhoberman">pjhoberman</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Raony Guimarães Corrêa</td>
     <td>
       <a href="https://github.com/raonyguimaraes">raonyguimaraes</a>
@@ -1420,6 +1434,13 @@ Listed in alphabetical order.
     <td>egregors</td>
   </tr>
   <tr>
+    <td>vascop</td>
+    <td>
+      <a href="https://github.com/vascop">vascop</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Vicente G. Reyes</td>
     <td>
       <a href="https://github.com/reyesvicente">reyesvicente</a>
@@ -1479,6 +1500,13 @@ Listed in alphabetical order.
     <td>Yaroslav Halchenko</td>
     <td>
       <a href="https://github.com/"></a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Yotam Tal</td>
+    <td>
+      <a href="https://github.com/yotamtal">yotamtal</a>
     </td>
     <td></td>
   </tr>
