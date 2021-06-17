@@ -11,7 +11,7 @@ repos:
       - id: check-yaml
 
   - repo: https://github.com/psf/black
-    rev: 21.5b1
+    rev: 21.5b2
     hooks:
       - id: black
 
@@ -27,3 +27,9 @@ repos:
         args: ['--config=setup.cfg']
         additional_dependencies: [flake8-isort]
 
+
+# sets up .pre-commit-ci.yaml to ensure pre-commit dependencies stay up to date
+ci:
+    autoupdate_schedule: weekly
+    skip: []
+    submodules: false
