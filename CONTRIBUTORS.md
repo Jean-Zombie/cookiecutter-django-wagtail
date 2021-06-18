@@ -713,6 +713,13 @@ Listed in alphabetical order.
     <td></td>
   </tr>
   <tr>
+    <td>Grant McLean</td>
+    <td>
+      <a href="https://github.com/grantm">grantm</a>
+    </td>
+    <td>grantmnz</td>
+  </tr>
+  <tr>
     <td>Guilherme Guy</td>
     <td>
       <a href="https://github.com/guilherme1guy">guilherme1guy</a>
@@ -975,6 +982,13 @@ Listed in alphabetical order.
     <td>Krzysztof Żuraw</td>
     <td>
       <a href="https://github.com/krzysztofzuraw">krzysztofzuraw</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>lcd1232</td>
+    <td>
+      <a href="https://github.com/lcd1232">lcd1232</a>
     </td>
     <td></td>
   </tr>
@@ -1245,6 +1259,13 @@ Listed in alphabetical order.
     <td></td>
   </tr>
   <tr>
+    <td>Ray Besiga</td>
+    <td>
+      <a href="https://github.com/raybesiga">raybesiga</a>
+    </td>
+    <td>raybesiga</td>
+  </tr>
+  <tr>
     <td>Reggie Riser</td>
     <td>
       <a href="https://github.com/reggieriser">reggieriser</a>
@@ -1353,6 +1374,13 @@ Listed in alphabetical order.
     <td>Sławek Ehlert</td>
     <td>
       <a href="https://github.com/slafs">slafs</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Tames McTigue</td>
+    <td>
+      <a href="https://github.com/Tamerz">Tamerz</a>
     </td>
     <td></td>
   </tr>

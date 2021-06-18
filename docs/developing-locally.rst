@@ -9,7 +9,7 @@ Setting Up Development Environment
 
 Make sure to have the following on your host:
 
-* Python 3.8
+* Python 3.9
 * PostgreSQL_.
 * Redis_, if using Celery
 * Cookiecutter_
@@ -18,7 +18,7 @@ First things first.
 
 #. Create a virtualenv: ::
 
-    $ python3.8 -m venv <virtual env path>
+    $ python3.9 -m venv <virtual env path>
 
 #. Activate the virtualenv you have just created: ::
 
@@ -36,8 +36,8 @@ First things first.
 
    .. note::
 
-       the `pre-commit` exists in the generated project as default.
-       for the details of `pre-commit`, follow the [site of pre-commit](https://pre-commit.com/).
+       the `pre-commit` hook exists in the generated project as default.
+       For the details of `pre-commit`, follow the `pre-commit`_ site.
 
 #. Create a new PostgreSQL database using createdb_: ::
 
@@ -88,6 +88,7 @@ or if you're running asynchronously: ::
 .. _createdb: https://www.postgresql.org/docs/current/static/app-createdb.html
 .. _initial PostgreSQL set up: http://suite.opengeo.org/docs/latest/dataadmin/pgGettingStarted/firstconnect.html
 .. _postgres documentation: https://www.postgresql.org/docs/current/static/auth-pg-hba-conf.html
+.. _pre-commit: https://pre-commit.com/
 .. _direnv: https://direnv.net/
 
 
