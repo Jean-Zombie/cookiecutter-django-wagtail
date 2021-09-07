@@ -26,7 +26,7 @@ Features
 ---------
 
 * For Django 3.1
-* **Wagtail 2.13**
+* **Wagtail 2.14**
 * Works with Python 3.9
 * Renders Django projects with 100% starting test coverage
 * Twitter Bootstrap_ v4 (`maintained Foundation fork`_ also available)
@@ -82,7 +82,7 @@ Constraints
 -----------
 
 * Only maintained 3rd party libraries are used.
-* Uses PostgreSQL everywhere (9.4 - 12.3)
+* Uses PostgreSQL everywhere (10.16 - 13.2)
 * Environment variables for configuration (This won't work with Apache/mod_wsgi).
 
 Usage

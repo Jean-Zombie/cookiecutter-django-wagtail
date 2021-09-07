@@ -4,21 +4,21 @@ binaryornot==0.4.4
 
 # Code quality
 # ------------------------------------------------------------------------------
-black==21.5b2
-isort==5.8.0
+black==21.8b0
+isort==5.9.3
 flake8==3.9.2
 flake8-isort==4.0.0
-pre-commit==2.13.0
+pre-commit==2.15.0
 
 # Testing
 # ------------------------------------------------------------------------------
-tox==3.23.1
-pytest==5.4.3  # pyup: <6  # https://github.com/hackebrot/pytest-cookies/issues/51
-pytest-cookies==0.5.1
+tox==3.24.3
+pytest==6.2.5
+pytest-cookies==0.6.1
 pytest-instafail==0.4.2
 pyyaml==5.4.1
 
 # Scripting
 # ------------------------------------------------------------------------------
 PyGithub==1.55
-jinja2==2.11.3
+jinja2==3.0.1
