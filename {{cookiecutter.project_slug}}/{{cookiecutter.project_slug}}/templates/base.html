@@ -32,6 +32,10 @@
     {%- endraw %}{% endif %}{% raw %}
     {%- endraw %}{% if cookiecutter.use_compressor == "y" %}{% raw %}{% endcompress %}{% endraw %}{% endif %}{% raw %}
     {% endblock %}
+    <!-- Wagtail convention -->
+    {% block extra_css %}
+    {% endblock %}
+    
     <!-- Le javascript
     ================================================== -->
     {# Placed at the top of the document so pages load faster with defer #}
