@@ -33,7 +33,6 @@ Features
 * 12-Factor_ based settings via django-environ_
 * Secure by default. We believe in SSL.
 * Optimized development and production settings
-* Registration via django-allauth_
 * Comes with custom user model ready to go
 * Optional basic ASGI setup for Websockets
 * Optional custom static build using Gulp and livereload
@@ -81,6 +80,7 @@ Optional Integrations
 Constraints
 -----------
 
+* Registration via django-allauth_ not implemented (unlike the OG Cookiecutter Django)
 * Only maintained 3rd party libraries are used.
 * Uses PostgreSQL everywhere (10.16 - 13.2)
 * Environment variables for configuration (This won't work with Apache/mod_wsgi).
