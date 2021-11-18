@@ -11,9 +11,9 @@ from django.views.generic import TemplateView
 {%- if cookiecutter.use_drf == 'y' %}
 from rest_framework.authtoken.views import obtain_auth_token
 {%- endif %}
-from wagtail.documents import urls as wagtaildocs_urls  # noqa isort:skip
-from wagtail.core import urls as wagtail_urls  # noqa isort:skip
-from wagtail.admin import urls as wagtailadmin_urls  # noqa isort:skip
+from wagtail.admin import urls as wagtailadmin_urls
+from wagtail.core import urls as wagtail_urls
+from wagtail.documents import urls as wagtaildocs_urls
 
 from {{ cookiecutter.project_slug }}.search import views as search_views  # noqa isort:skip
 
