@@ -29,7 +29,7 @@ Features
 * **Wagtail 2.14**
 * Works with Python 3.9
 * Renders Django projects with 100% starting test coverage
-* Twitter Bootstrap_ v4 (`maintained Foundation fork`_ also available)
+* Twitter Bootstrap_ v5 (`maintained Foundation fork`_ also available)
 * 12-Factor_ based settings via django-environ_
 * Secure by default. We believe in SSL.
 * Optimized development and production settings

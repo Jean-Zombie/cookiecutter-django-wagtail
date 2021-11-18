@@ -15,9 +15,10 @@ jobs:
           - py39
           - black-template
 
+    name: "tox env ${{ matrix.tox-env }}"
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2.2.2
+      - uses: actions/setup-python@v2
         with:
           python-version: 3.9
       - name: Install dependencies
@@ -38,13 +39,14 @@ jobs:
           - name: Extended
             args: "use_celery=y use_drf=y js_task_runner=Gulp"
 
+    name: "${{ matrix.script.name }} Docker"
     env:
       DOCKER_BUILDKIT: 1
       COMPOSE_DOCKER_CLI_BUILD: 1
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2.2.2
+      - uses: actions/setup-python@v2
         with:
           python-version: 3.9
       - name: Docker ${{ matrix.script.name }}
@@ -58,7 +60,10 @@ jobs:
         script:
           - name: With Celery
             args: "use_celery=y use_compressor=y"
+          - name: With Gulp
+            args: "js_task_runner=Gulp custom_bootstrap_compilation=y"
 
+    name: "${{ matrix.script.name }} Bare metal"
     services:
       redis:
         image: redis:5.0
@@ -77,9 +82,12 @@ jobs:
       DATABASE_URL: "postgres://postgres:postgres@localhost:5432/postgres"
 
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.9
+          python-version: "3.9"
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
       - name: Bare Metal ${{ matrix.script.name }}
         run: sh tests/test_bare.sh ${{ matrix.script.args }}
