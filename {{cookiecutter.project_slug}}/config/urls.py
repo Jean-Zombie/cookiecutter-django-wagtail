@@ -19,6 +19,9 @@ from {{ cookiecutter.project_slug }}.search import views as search_views  # noqa
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="home/home_page.html"), name="home"),
+    path(
+        "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
+    ),
     # Django Admin, use {% raw %}{% url "admin:index" %}{% endraw %}
     path(settings.DJANGO_ADMIN_URL, admin.site.urls),
     # Wagtail Admin
