@@ -916,6 +916,13 @@ Listed in alphabetical order.
     <td>Adys</td>
   </tr>
   <tr>
+    <td>Jesús López de Leyva</td>
+    <td>
+      <a href="https://github.com/deleyva">deleyva</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Jimmy Gitonga</td>
     <td>
       <a href="https://github.com/Afrowave">Afrowave</a>
