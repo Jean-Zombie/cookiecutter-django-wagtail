@@ -4,11 +4,10 @@
 [![Documentation Status](https://readthedocs.org/projects/cookiecutter-django/badge/?version=latest)](https://cookiecutter-django.readthedocs.io/en/latest/?badge=latest)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
-Powered by [Cookiecutter](https://github.com/cookiecutter/cookiecutter), Cookiecutter-Django-Wagtail is a fork of the awesome `Cookiecutter Django` combined with `Wagtail`.
+Powered by [Cookiecutter](https://github.com/cookiecutter/cookiecutter), Cookiecutter-Django-Wagtail is a fork of the awesome [Cookiecutter Django](https://github.com/cookiecutter/cookiecutter-django) combined with [Wagtail](https://wagtail.io/).
 
 - Documentation: <https://cookiecutter-django.readthedocs.io/en/latest/>
 - See [Troubleshooting](https://cookiecutter-django.readthedocs.io/en/latest/troubleshooting.html) for common errors and obstacles
-- [Wagtail](https://wagtail.io/)
 
 ## Features
 
