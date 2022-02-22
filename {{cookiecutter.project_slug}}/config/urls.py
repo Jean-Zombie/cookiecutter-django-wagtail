@@ -31,11 +31,7 @@ urlpatterns = [
     re_path(r"^search/$", search_views.search, name="search"),
     # User management
     path("users/", include("{{ cookiecutter.project_slug }}.users.urls", namespace="users")),
-    path("accounts/", include("allauth.urls")),{% if cookiecutter.use_drf == 'y' %}
-    # API base url
-    path("api/", include("config.api_router")),
-    # DRF auth token
-    path("auth-token/", obtain_auth_token),{%- endif %}
+    path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
     # For anything not caught by a more specific rule above, hand over to
     # Wagtail’s page serving mechanism. This should be the last pattern in
