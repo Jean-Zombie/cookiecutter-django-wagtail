@@ -112,7 +112,6 @@ _TABLE_HEADER = """
 """
 VITAL_BUT_UNKNOWN = [
     "django-environ",  # not updated often
-    "pylint-django",  # classifier not included in setup.py
 ]
 
 
@@ -193,7 +192,9 @@ class GitHubManager:
         # updated packages, or known releases that will happen but haven't yet
         if issue := self.existing_issues.get(needed_dj_version):
             if index := issue.body.find(package_name):
-                name, _current, prev_compat, ok = issue.body[index:].split("|", 4)[:4]
+                name, _current, prev_compat, ok = [
+                    s.strip() for s in issue.body[index:].split("|", 4)[:4]
+                ]
                 if ok in ("✅", "❓", "🕒"):
                     return prev_compat, ok
 
@@ -263,9 +264,10 @@ class GitHubManager:
             issue.edit(body=description)
         else:
             print(f"Creating new issue for Django {needed_dj_version}")
-            self.repo.create_issue(
+            issue = self.repo.create_issue(
                 f"[Update Django] Django {needed_dj_version}", description
             )
+            issue.add_to_labels(f"django{needed_dj_version}")
 
     def generate(self):
         for version in self.needed_dj_versions:

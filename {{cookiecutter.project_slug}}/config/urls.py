@@ -9,6 +9,7 @@ from django.views import defaults as default_views
 from django.views.generic import TemplateView
 
 {%- if cookiecutter.use_drf == 'y' %}
+from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from rest_framework.authtoken.views import obtain_auth_token
 {%- endif %}
 from wagtail.admin import urls as wagtailadmin_urls
@@ -48,6 +49,21 @@ urlpatterns = [
 if settings.DEBUG:
     # Static file serving when using Gunicorn + Uvicorn for local web socket development
     urlpatterns += staticfiles_urlpatterns()
+{%- endif %}
+{% if cookiecutter.use_drf == 'y' %}
+# API URLS
+urlpatterns += [
+    # API base url
+    path("api/", include("config.api_router")),
+    # DRF auth token
+    path("auth-token/", obtain_auth_token),
+    path("api/schema/", SpectacularAPIView.as_view(), name="api-schema"),
+    path(
+        "api/docs/",
+        SpectacularSwaggerView.as_view(url_name="api-schema"),
+        name="api-docs",
+    ),
+]
 {%- endif %}
 
 if settings.DEBUG:

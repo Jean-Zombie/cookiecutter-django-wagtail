@@ -5,24 +5,26 @@ name: Django Issue Checker
 
 on:
   schedule:
-  - cron: "28 5 * * *"
+    - cron: "28 5 * * *"
   # Manual trigger
   workflow_dispatch:
 
-
 jobs:
-  issue-manager:
+  issue-checker:
+    # Disables this workflow from running in a repository that is not part of the indicated organization/user
+    if: github.repository_owner == 'cookiecutter'
+
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2.2.2
-      with:
-        python-version: 3.9
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    - name: Create Django Major Issue
-      run: python scripts/create_django_issue.py
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Create Django Major Issue
+        run: python scripts/create_django_issue.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
