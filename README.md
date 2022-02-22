@@ -56,24 +56,6 @@ The upstream of this repo, i.e. _Cookiecutter Django_, is run by volunteers. Ple
 - Daniel Roy Greenfeld, Project Lead ([GitHub](https://github.com/pydanny), [Patreon](https://www.patreon.com/danielroygreenfeld)): expertise in Django and AWS ELB.
 - Nikita Shupeyko, Core Developer ([GitHub](https://github.com/webyneter)): expertise in Python/Django, hands-on DevOps and frontend experience.
 
-Projects that provide financial support to the maintainers:
-
----
-
-<p align="center">
-  <a href="https://www.feldroy.com/products//two-scoops-of-django-3-x"><img src="https://cdn.shopify.com/s/files/1/0304/6901/products/Two-Scoops-of-Django-3-Alpha-Cover_540x_26507b15-e489-470b-8a97-02773dd498d1_1080x.jpg"></a>
-</p>
-
-Two Scoops of Django 3.x is the best ice cream-themed Django reference in the universe!
-
-### PyUp
-
-<p align="center">
-  <a href="https://pyup.io/"><img src="https://pyup.io/static/images/logo.png"></a>
-</p>
-
-PyUp brings you automated security and dependency updates used by Google and other organizations. Free for open source projects!
-
 ## Usage
 
 Instead of using Wagtail’s :code:`start` command you will use Cookiecutter to set up your project. Cookiecutter will prompt you for some technical and administrative question like your name, email, and various configuration issues.
@@ -178,29 +160,6 @@ For local development, see the following:
 
 - [Developing locally](http://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html)
 - [Developing locally using docker](http://cookiecutter-django.readthedocs.io/en/latest/developing-locally-docker.html)
-
-## Community
-
-- Have questions? **Before you ask questions anywhere else**, please post your question on [Stack Overflow](http://stackoverflow.com/questions/tagged/cookiecutter-django) under the _cookiecutter-django_ tag. We check there periodically for questions.
-- If you think you found a bug or want to request a feature, please open an [issue](https://github.com/cookiecutter/cookiecutter-django/issues).
-- For anything else, you can chat with us on [Discord](https://discord.gg/uFXweDQc5a).
-
-## For Readers of Two Scoops of Django
-
-You may notice that some elements of this project do not exactly match what we describe in chapter 3. The reason for that is this project, amongst other things, serves as a test bed for trying out new ideas and concepts. Sometimes they work, sometimes they don't, but the end result is that it won't necessarily match precisely what is described in the book I co-authored.
-
-## For PyUp Users
-
-If you are using [PyUp](https://pyup.io) to keep your dependencies updated and secure, use the code _cookiecutter_ during checkout to get 15% off every month.
-
-## "Your Stuff"
-
-Scattered throughout the Python and HTML of this project are places marked with "your stuff". This is where third-party libraries are to be integrated with your project.
-
-## For MySQL users
-
-To get full MySQL support in addition to the default Postgresql, you can use this fork of the cookiecutter-django:
-https://github.com/mabdullahadeel/cookiecutter-django-mysql
 
 ## Code of Conduct
 
