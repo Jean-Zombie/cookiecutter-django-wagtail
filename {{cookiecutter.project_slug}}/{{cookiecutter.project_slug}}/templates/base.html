@@ -1,5 +1,4 @@
-{% raw %}{% load static i18n wagtailuserbar{% endraw %}
-{% if cookiecutter.use_compressor == "y" %}compress{% endif %}{% raw %}%}
+{% raw %}{% load static i18n wagtailuserbar {% endraw %}{% if cookiecutter.use_compressor == "y" %}compress{% endif %}{% raw %}%}
 <!DOCTYPE html>
 {% get_current_language as LANGUAGE_CODE %}
 <html lang="{{ LANGUAGE_CODE }}">
@@ -137,7 +136,8 @@
     with a "defer" so that you run inline code:
     <script>
       window.addEventListener('DOMContentLoaded', () => {
-        /* Run whatever you want */ });
+        /* Run whatever you want */
+      });
 
     </script>
     {% endcomment %}
