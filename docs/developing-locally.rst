@@ -26,7 +26,7 @@ First things first.
 
 #. Install cookiecutter-django-wagtail: ::
 
-    $ cookiecutter gh: Jean-Zombie/cookiecutter-django-wagtail 
+    $ cookiecutter gh: Jean-Zombie/cookiecutter-django-wagtail
 
 #. Install development requirements: ::
 
