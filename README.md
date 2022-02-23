@@ -43,10 +43,10 @@ _These features can be enabled during initial project setup._
 
 ## Constraints
 
+- DRF as a setup option is removed for now, since the implementation of the OG Cookiecutter Django clashes with Wagtails API.
 - Only maintained 3rd party libraries are used.
 - Uses PostgreSQL everywhere: 10.19 - 14.1 ([MySQL fork](https://github.com/mabdullahadeel/cookiecutter-django-mysql) also available).
 - Environment variables for configuration (This won't work with Apache/mod_wsgi).
-- Registration via django-allauth\_ not implemented (unlike the OG Cookiecutter Django)
 
 ## Support Cookiecutter Django!
 
