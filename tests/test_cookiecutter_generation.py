@@ -85,8 +85,6 @@ SUPPORTED_COMBINATIONS = [
     # Note: cloud_providers GCP and None with mail_service Amazon SES is not supported
     {"use_async": "y"},
     {"use_async": "n"},
-    {"use_drf": "y"},
-    {"use_drf": "n"},
     {"js_task_runner": "None"},
     {"js_task_runner": "Gulp"},
     {"custom_bootstrap_compilation": "y"},

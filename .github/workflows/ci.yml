@@ -50,7 +50,7 @@ jobs:
           - name: Basic
             args: ""
           - name: Extended
-            args: "use_celery=y use_drf=y js_task_runner=Gulp"
+            args: "use_celery=y js_task_runner=Gulp"
 
     name: "${{ matrix.script.name }} Docker"
     runs-on: ubuntu-latest
