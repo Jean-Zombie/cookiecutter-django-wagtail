@@ -61,7 +61,7 @@ Instead of using Wagtail’s :code:`start` command you will use Cookiecutter to 
 
 First, get Cookiecutter:
 
-    $ pip install "cookiecutter>=1.7.0"
+    $ pip install "cookiecutter>=2.1.1"
 
 Now run it against this repo:
 
