@@ -338,4 +338,4 @@ STATICFILES_FINDERS += ["compressor.finders.CompressorFinder"]
 {%- endif %}
 # Your stuff...
 WAGTAIL_SITE_NAME = "{{cookiecutter.project_slug}}"
-BASE_URL = "https://{{cookiecutter.project_slug}}"
+WAGTAILADMIN_BASE_URL = "https://{{cookiecutter.project_slug}}"
