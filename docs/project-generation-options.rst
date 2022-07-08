@@ -86,9 +86,6 @@ mail_service:
 use_async:
     Indicates whether the project should use web sockets with Uvicorn + Gunicorn.
 
-use_drf:
-    Indicates whether the project should be configured to use `Django Rest Framework`_.
-
 frontend_pipeline:
     Select a pipeline to compile and optimise frontend assets (JS, CSS, ...):
 

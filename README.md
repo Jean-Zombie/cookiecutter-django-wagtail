@@ -119,7 +119,6 @@ Answer the prompts with your own desired [options](http://cookiecutter-django.re
     9 - Other SMTP
     Choose from 1, 2, 3, 4, 5, 6, 7, 8, 9 [1]: 1
     use_async [n]: n
-    use_drf [n]: y
     Select frontend_pipeline:
     1 - None
     2 - Django Compressor

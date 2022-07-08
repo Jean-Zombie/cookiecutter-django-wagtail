@@ -50,7 +50,7 @@ jobs:
           - name: Basic
             args: ""
           - name: Extended
-            args: "use_celery=y use_drf=y frontend_pipeline=Gulp"
+            args: "use_celery=y frontend_pipeline=Gulp"
 
     name: "${{ matrix.script.name }} Docker"
     runs-on: ubuntu-latest
