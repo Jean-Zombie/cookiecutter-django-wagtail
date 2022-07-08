@@ -24,10 +24,10 @@ jobs:
     steps:
 
       - name: Checkout Code Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: "3.9"
           cache: pip
@@ -68,7 +68,7 @@ jobs:
     steps:
 
       - name: Checkout Code Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       {%- if cookiecutter.use_docker == 'y' %}
 
       - name: Build the Stack
@@ -85,7 +85,7 @@ jobs:
       {%- else %}
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: "3.9"
           cache: pip

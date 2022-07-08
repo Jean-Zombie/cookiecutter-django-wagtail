@@ -55,17 +55,11 @@ use_docker:
 postgresql_version:
     Select a PostgreSQL_ version to use. The choices are:
 
-    1. 14.1
-    2. 13.5
-    3. 12.9
-    4. 11.14
-    5. 10.19
-
-js_task_runner:
-    Select a JavaScript task runner. The choices are:
-
-    1. None
-    2. Gulp_
+    1. 14
+    2. 13
+    3. 12
+    4. 11
+    5. 10
 
 cloud_provider:
     Select a cloud provider for static & media files. The choices are:
@@ -92,13 +86,15 @@ mail_service:
 use_async:
     Indicates whether the project should use web sockets with Uvicorn + Gunicorn.
 
-custom_bootstrap_compilation:
-    Indicates whether the project should support Bootstrap recompilation
-    via the selected JavaScript task runner's task. This can be useful
-    for real-time Bootstrap variable alteration.
+use_drf:
+    Indicates whether the project should be configured to use `Django Rest Framework`_.
 
-use_compressor:
-    Indicates whether the project should be configured to use `Django Compressor`_.
+frontend_pipeline:
+    Select a pipeline to compile and optimise frontend assets (JS, CSS, ...):
+
+    1. None
+    2. `Django Compressor`_
+    3. `Gulp`_: support Bootstrap recompilation with real-time variables alteration.
 
 use_celery:
     Indicates whether the project should be configured to use Celery_.
