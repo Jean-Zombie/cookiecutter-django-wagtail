@@ -11,9 +11,9 @@ Powered by [Cookiecutter](https://github.com/cookiecutter/cookiecutter), Cookiec
 
 ## Features
 
-- For Django 3.2
-- Works with Python 3.9
-- Wagtail 3
+- For Django 4.1
+- Works with Python 3.10
+- Wagtail 4
 - Renders Django projects with 100% starting test coverage
 - Twitter [Bootstrap](https://github.com/twbs/bootstrap) v5
 - [12-Factor](http://12factor.net/) based settings via [django-environ](https://github.com/joke2k/django-environ)
@@ -36,7 +36,7 @@ Powered by [Cookiecutter](https://github.com/cookiecutter/cookiecutter), Cookiec
 
 _These features can be enabled during initial project setup._
 
--   Serve static files from Amazon S3, Google Cloud Storage or [Whitenoise](https://whitenoise.readthedocs.io/)
+-   Serve static files from Amazon S3, Google Cloud Storage, Azure Storage or [Whitenoise](https://whitenoise.readthedocs.io/)
 -   Configuration for [Celery](https://docs.celeryq.dev) and [Flower](https://github.com/mher/flower) (the latter in Docker setup only)
 -   Integration with [MailHog](https://github.com/mailhog/MailHog) for local email testing
 -   Integration with [Sentry](https://sentry.io/welcome/) for error logging
@@ -123,6 +123,7 @@ Answer the prompts with your own desired [options](http://cookiecutter-django.re
     1 - None
     2 - Django Compressor
     3 - Gulp
+    4 - Webpack
     Choose from 1, 2, 3, 4 [1]: 1
     use_celery [n]: y
     use_mailhog [n]: n
@@ -206,6 +207,8 @@ experience better.
 
 ## Articles
 
+-   [Cookiecutter Django With Amazon RDS](https://haseeburrehman.com/posts/cookiecutter-django-with-amazon-rds/) - Apr, 2, 2021
+-   [Complete Walkthrough: Blue/Green Deployment to AWS ECS using GitHub actions](https://github.com/Andrew-Chen-Wang/cookiecutter-django-ecs-github) - June 10, 2020
 -   [Using cookiecutter-django with Google Cloud Storage](https://ahhda.github.io/cloud/gce/django/2019/03/12/using-django-cookiecutter-cloud-storage.html) - Mar. 12, 2019
 -   [cookiecutter-django with Nginx, Route 53 and ELB](https://msaizar.com/blog/cookiecutter-django-nginx-route-53-and-elb/) - Feb. 12, 2018
 -   [cookiecutter-django and Amazon RDS](https://msaizar.com/blog/cookiecutter-django-and-amazon-rds/) - Feb. 7, 2018

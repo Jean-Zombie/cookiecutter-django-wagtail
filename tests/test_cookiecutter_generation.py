@@ -56,6 +56,8 @@ SUPPORTED_COMBINATIONS = [
     {"cloud_provider": "AWS", "use_whitenoise": "n"},
     {"cloud_provider": "GCP", "use_whitenoise": "y"},
     {"cloud_provider": "GCP", "use_whitenoise": "n"},
+    {"cloud_provider": "Azure", "use_whitenoise": "y"},
+    {"cloud_provider": "Azure", "use_whitenoise": "n"},
     {"cloud_provider": "None", "use_whitenoise": "y", "mail_service": "Mailgun"},
     {"cloud_provider": "None", "use_whitenoise": "y", "mail_service": "Mailjet"},
     {"cloud_provider": "None", "use_whitenoise": "y", "mail_service": "Mandrill"},
@@ -82,12 +84,24 @@ SUPPORTED_COMBINATIONS = [
     {"cloud_provider": "GCP", "mail_service": "SendinBlue"},
     {"cloud_provider": "GCP", "mail_service": "SparkPost"},
     {"cloud_provider": "GCP", "mail_service": "Other SMTP"},
-    # Note: cloud_providers GCP and None with mail_service Amazon SES is not supported
+    {"cloud_provider": "Azure", "mail_service": "Mailgun"},
+    {"cloud_provider": "Azure", "mail_service": "Mailjet"},
+    {"cloud_provider": "Azure", "mail_service": "Mandrill"},
+    {"cloud_provider": "Azure", "mail_service": "Postmark"},
+    {"cloud_provider": "Azure", "mail_service": "Sendgrid"},
+    {"cloud_provider": "Azure", "mail_service": "SendinBlue"},
+    {"cloud_provider": "Azure", "mail_service": "SparkPost"},
+    {"cloud_provider": "Azure", "mail_service": "Other SMTP"},
+    # Note: cloud_providers GCP, Azure, and None
+    # with mail_service Amazon SES is not supported
     {"use_async": "y"},
     {"use_async": "n"},
+    {"use_drf": "y"},
+    {"use_drf": "n"},
     {"frontend_pipeline": "None"},
     {"frontend_pipeline": "Django Compressor"},
     {"frontend_pipeline": "Gulp"},
+    {"frontend_pipeline": "Webpack"},
     {"use_celery": "y"},
     {"use_celery": "n"},
     {"use_mailhog": "y"},
@@ -111,6 +125,7 @@ SUPPORTED_COMBINATIONS = [
 UNSUPPORTED_COMBINATIONS = [
     {"cloud_provider": "None", "use_whitenoise": "n"},
     {"cloud_provider": "GCP", "mail_service": "Amazon SES"},
+    {"cloud_provider": "Azure", "mail_service": "Amazon SES"},
     {"cloud_provider": "None", "mail_service": "Amazon SES"},
 ]
 
@@ -120,11 +135,11 @@ def _fixture_id(ctx):
     return "-".join(f"{key}:{value}" for key, value in ctx.items())
 
 
-def build_files_list(root_dir):
+def build_files_list(base_dir):
     """Build a list containing absolute paths to the generated files."""
     return [
         os.path.join(dirpath, file_path)
-        for dirpath, subdirs, files in os.walk(root_dir)
+        for dirpath, subdirs, files in os.walk(base_dir)
         for file_path in files
     ]
 
@@ -217,7 +232,7 @@ def test_travis_invokes_pytest(cookies, context, use_docker, expected_test_scrip
         ("y", "docker-compose -f local.yml run django pytest"),
     ],
 )
-def test_gitlab_invokes_flake8_and_pytest(
+def test_gitlab_invokes_precommit_and_pytest(
     cookies, context, use_docker, expected_test_script
 ):
     context.update({"ci_tool": "Gitlab", "use_docker": use_docker})
@@ -231,7 +246,9 @@ def test_gitlab_invokes_flake8_and_pytest(
     with open(f"{result.project_path}/.gitlab-ci.yml") as gitlab_yml:
         try:
             gitlab_config = yaml.safe_load(gitlab_yml)
-            assert gitlab_config["flake8"]["script"] == ["flake8"]
+            assert gitlab_config["precommit"]["script"] == [
+                "pre-commit run --show-diff-on-failure --color=always --all-files"
+            ]
             assert gitlab_config["pytest"]["script"] == [expected_test_script]
         except yaml.YAMLError as e:
             pytest.fail(e)
@@ -302,10 +319,29 @@ def test_error_if_incompatible(cookies, context, invalid_context):
     ],
 )
 def test_pycharm_docs_removed(cookies, context, use_pycharm, pycharm_docs_exist):
-    """."""
     context.update({"use_pycharm": use_pycharm})
     result = cookies.bake(extra_context=context)
 
     with open(f"{result.project_path}/docs/index.rst") as f:
         has_pycharm_docs = "pycharm/configuration" in f.read()
         assert has_pycharm_docs is pycharm_docs_exist
+
+
+def test_trim_domain_email(cookies, context):
+    """Check that leading and trailing spaces are trimmed in domain and email."""
+    context.update(
+        {
+            "use_docker": "y",
+            "domain_name": "   example.com   ",
+            "email": "  me@example.com  ",
+        }
+    )
+    result = cookies.bake(extra_context=context)
+
+    assert result.exit_code == 0
+
+    prod_django_env = result.project_path / ".envs" / ".production" / ".django"
+    assert "DJANGO_ALLOWED_HOSTS=.example.com" in prod_django_env.read_text()
+
+    base_settings = result.project_path / "config" / "settings" / "base.py"
+    assert '"me@example.com"' in base_settings.read_text()

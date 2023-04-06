@@ -10,6 +10,7 @@ const pjson = require('./package.json')
 const autoprefixer = require('autoprefixer')
 const browserSync = require('browser-sync').create()
 const concat = require('gulp-concat')
+const tildeImporter = require('node-sass-tilde-importer');
 const cssnano = require ('cssnano')
 const imagemin = require('gulp-imagemin')
 const pixrem = require('pixrem')
@@ -27,7 +28,6 @@ function pathsConfig(appName) {
   const vendorsRoot = 'node_modules'
 
   return {
-    bootstrapSass: `${vendorsRoot}/bootstrap/scss`,
     vendorsJs: [
       `${vendorsRoot}/@popperjs/core/dist/umd/popper.js`,
       `${vendorsRoot}/bootstrap/dist/js/bootstrap.js`,
@@ -42,7 +42,7 @@ function pathsConfig(appName) {
   }
 }
 
-var paths = pathsConfig()
+const paths = pathsConfig()
 
 ////////////////////////////////
 // Tasks
@@ -50,19 +50,19 @@ var paths = pathsConfig()
 
 // Styles autoprefixing and minification
 function styles() {
-  var processCss = [
+  const processCss = [
       autoprefixer(), // adds vendor prefixes
       pixrem(),       // add fallbacks for rem units
   ]
 
-  var minifyCss = [
+  const minifyCss = [
       cssnano({ preset: 'default' })   // minify result
   ]
 
   return src(`${paths.sass}/project.scss`)
     .pipe(sass({
+      importer: tildeImporter,
       includePaths: [
-        paths.bootstrapSass,
         paths.sass
       ]
     }).on('error', sass.logError))
@@ -85,13 +85,13 @@ function scripts() {
 
 // Vendor Javascript minification
 function vendorScripts() {
-  return src(paths.vendorsJs)
+  return src(paths.vendorsJs, { sourcemaps: true })
     .pipe(concat('vendors.js'))
     .pipe(dest(paths.js))
     .pipe(plumber()) // Checks for errors
     .pipe(uglify()) // Minifies the js
     .pipe(rename({ suffix: '.min' }))
-    .pipe(dest(paths.js))
+    .pipe(dest(paths.js, { sourcemaps: '.' }))
 }
 
 // Image compression
@@ -104,7 +104,7 @@ function imgCompression() {
 {%- if cookiecutter.use_async == 'y' -%}
 // Run django server
 function asyncRunServer() {
-  var cmd = spawn('gunicorn', [
+  const cmd = spawn('gunicorn', [
       'config.asgi', '-k', 'uvicorn.workers.UvicornWorker', '--reload'
       ], {stdio: 'inherit'}
   )
@@ -115,7 +115,7 @@ function asyncRunServer() {
 {%- else %}
 // Run django server
 function runServer(cb) {
-  var cmd = spawn('python', ['manage.py', 'runserver'], {stdio: 'inherit'})
+  const cmd = spawn('python', ['manage.py', 'runserver'], {stdio: 'inherit'})
   cmd.on('close', function(code) {
     console.log('runServer exited with code ' + code)
     cb(code)
