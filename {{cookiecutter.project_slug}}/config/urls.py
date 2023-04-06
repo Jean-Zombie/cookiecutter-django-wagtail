@@ -10,6 +10,7 @@ from django.views.generic import TemplateView
 from wagtail import urls as wagtail_urls
 from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.documents import urls as wagtaildocs_urls
+
 from {{ cookiecutter.project_slug }}.search import views as search_views  # noqa isort:skip
 
 urlpatterns = [
