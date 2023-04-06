@@ -96,8 +96,6 @@ SUPPORTED_COMBINATIONS = [
     # with mail_service Amazon SES is not supported
     {"use_async": "y"},
     {"use_async": "n"},
-    {"use_drf": "y"},
-    {"use_drf": "n"},
     {"frontend_pipeline": "None"},
     {"frontend_pipeline": "Django Compressor"},
     {"frontend_pipeline": "Gulp"},

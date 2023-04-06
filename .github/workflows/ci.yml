@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ "master", "main" ]
+    branches: ["master", "main"]
   pull_request:
 
 concurrency:
@@ -39,8 +39,8 @@ jobs:
         script:
           - name: Basic
             args: ""
-          - name: Celery & DRF
-            args: "use_celery=y use_drf=y"
+          - name: Celery
+            args: "use_celery=y"
           - name: Gulp
             args: "frontend_pipeline=Gulp"
           - name: Webpack

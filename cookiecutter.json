@@ -42,7 +42,6 @@
     "Other SMTP"
   ],
   "use_async": "n",
-  "use_drf": "n",
   "frontend_pipeline": [
     "None",
     "Django Compressor",
